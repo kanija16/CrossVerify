@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CNN model checkpoint - too large for normal GitHub
+models/cnn/best_model.pt
+
+# Local dataset
+dataset/
+dataset_final_v2/
