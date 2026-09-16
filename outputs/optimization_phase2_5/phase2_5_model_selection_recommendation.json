@@ -1,0 +1,12 @@
+{
+  "selected_model": "A0 Canonical Random Forest (15 Features)",
+  "reasoning": "A0 is selected as the scientifically defensible model for Phase 3. The apparent PR-AUC gain in A1 (0.9729 -> 0.9781) was disproven as a Simpson's paradox artifact: within Family A, PR-AUC is identical (0.9767), and within Family B, PR-AUC is actually lower (0.9688 vs 0.9690). Furthermore, A1's higher F1 at tau=0.22 comes at a catastrophic cost to specificity (dropping genuine specificity from 0.8933 down to 0.4400, causing 84 false alarms out of 150 clean documents). A0 provides high genuine specificity (0.8933) and precision (0.9852) while remaining completely domain-agnostic.",
+  "rejected_models": {
+    "A1_Family_RF": "Suffers from severe false positive rate (FPR=56.0%) at tau=0.22, with zero intra-family ranking gain.",
+    "A2_Separate_RFs": "Operationally identical to A1 with unnecessary architectural complexity.",
+    "A3_Interactions": "Collinear and redundant over A1.",
+    "Ensemble_RF_HGB": "Gain of +0.0001 PR-AUC is statistically negligible.",
+    "Semantic_Alignment": "Re-indexes existing 5 slots with zero empirical gain."
+  },
+  "operating_point_recommendation": "tau=0.25 on A0 achieves F1=0.8257, Precision=0.9852, Recall=0.7107, Specificity=0.8933."
+}

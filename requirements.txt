@@ -1,0 +1,13 @@
+# Part 1 & 2
+pandas>=1.5
+numpy>=1.23
+scikit-learn>=1.2
+pytest>=7.0
+
+# Part 3 — Live OCR / Live QR
+pytesseract>=0.3.10
+opencv-python-headless>=4.8
+Pillow>=10.0
+
+# Test fixtures (rendering synthetic QR codes)
+qrcode>=7.4

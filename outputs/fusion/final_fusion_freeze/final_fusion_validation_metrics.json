@@ -1,0 +1,92 @@
+{
+  "pr_auc": 0.99072,
+  "roc_auc": 0.92276,
+  "brier_score": 0.05578,
+  "operating_threshold": 0.78,
+  "f1": 0.9297,
+  "precision": 0.9887,
+  "recall": 0.8773,
+  "specificity": 0.9,
+  "fpr": 0.1,
+  "accuracy": 0.8794,
+  "confusion_matrix": {
+    "tn": 135,
+    "fp": 15,
+    "fn": 184,
+    "tp": 1316
+  },
+  "attack_wise_breakdown": [
+    {
+      "tamper_type": "checksum_invalid",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 150,
+      "rate": 1.0
+    },
+    {
+      "tamper_type": "coordinated_full_forgery",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 19,
+      "rate": 0.1267
+    },
+    {
+      "tamper_type": "field_missing",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 150,
+      "rate": 1.0
+    },
+    {
+      "tamper_type": "fine_grained_edit",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 140,
+      "rate": 0.9333
+    },
+    {
+      "tamper_type": "format_invalid",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 150,
+      "rate": 1.0
+    },
+    {
+      "tamper_type": "genuine",
+      "role": "genuine",
+      "metric_name": "specificity",
+      "total_samples": 150,
+      "correct": 135,
+      "rate": 0.9
+    },
+    {
+      "tamper_type": "qr_only_mismatch",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 144,
+      "rate": 0.96
+    },
+    {
+      "tamper_type": "text_qr_mismatch",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 150,
+      "correct": 140,
+      "rate": 0.9333
+    },
+    {
+      "tamper_type": "visual_splice",
+      "role": "forged_attack",
+      "metric_name": "recall",
+      "total_samples": 450,
+      "correct": 423,
+      "rate": 0.94
+    }
+  ]
+}

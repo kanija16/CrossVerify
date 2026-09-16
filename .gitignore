@@ -216,3 +216,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CrossVerify dataset exclusion
+dataset_final_v2/
+images/
+labels/
+manifest.json
+record_id_split_map.csv
+train.csv
+val.csv
+test.csv
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# M2 CNN models directory (managed in cnn-baseline branch)
+/models/
+
+# Scratch and temporary directories
+scratch/
+tmp/
+*.tmp

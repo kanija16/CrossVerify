@@ -1,0 +1,7 @@
+ablation_id,description,model,n_features,pr_auc,roc_auc,brier_score,threshold,accuracy,precision,recall,f1,specificity,tn,fp,fn,tp
+A0_RF_Baseline,A0: 15 M3 Features Baseline,RandomForest,15,0.97288,0.83539,0.0708,0.76,0.7267,0.9852,0.71,0.8253,0.8933,134,16,435,1065
+A0_HGB_Baseline,A0: 15 M3 Features Baseline,HistGradientBoosting,15,0.97271,0.83438,0.07071,0.76,0.7261,0.9861,0.7087,0.8247,0.9,135,15,437,1063
+A1_RF_ForensicOnly,A1: 16 Forensic-Only Features,RandomForest,16,0.91604,0.50432,0.08389,0.5,0.9091,0.9091,1.0,0.9524,0.0,0,150,0,1500
+A1_HGB_ForensicOnly,A1: 16 Forensic-Only Features,HistGradientBoosting,16,0.9143,0.49897,0.08561,0.5,0.9085,0.91,0.998,0.952,0.0133,2,148,3,1497
+A2_RF_Combined,A2: 15 M3 + 16 Forensic Combined,RandomForest,31,0.98112,0.83721,0.07129,0.85,0.7273,0.9808,0.714,0.8264,0.86,129,21,429,1071
+A2_HGB_Combined,A2: 15 M3 + 16 Forensic Combined,HistGradientBoosting,31,0.98238,0.83617,0.07516,0.9,0.7291,0.9808,0.716,0.8277,0.86,129,21,426,1074

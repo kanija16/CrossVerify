@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-09-14T10:48:00+05:30",
+  "project": "/Users/pavankumar/Desktop/CrossVerify_M3",
+  "environment": {
+    "python_version": "3.13.5",
+    "ocr_backend": "Tesseract 5.5.3 (via pytesseract 0.3.13)",
+    "qr_backend": "OpenCV QRCodeDetector (opencv-python-headless 5.0.0.93)",
+    "pillow_version": "11.1.0",
+    "numpy_version": "2.1.3",
+    "pytest_version": "9.1.1"
+  },
+  "unit_tests": {
+    "total": 85,
+    "passed": 85,
+    "failed": 0,
+    "suite_breakdown": {
+      "part1_tests": 9,
+      "part2_validators_tests": 16,
+      "part2_consistency_tests": 21,
+      "part3_live_ocr_tests": 18,
+      "part3_live_qr_tests": 12,
+      "part3_live_pipeline_tests": 9
+    }
+  },
+  "split_integrity": {
+    "total_records": 11000,
+    "unique_identities": 1000,
+    "variants_per_identity": 11,
+    "identity_overlap_across_splits": 0,
+    "train_identities": 700,
+    "val_identities": 150,
+    "test_identities": 150,
+    "train_images": 7700,
+    "val_images": 1650,
+    "test_images": 1650,
+    "family_balance": {
+      "train": {"family_a": 3850, "family_b": 3850},
+      "val": {"family_a": 825, "family_b": 825},
+      "test": {"family_a": 825, "family_b": 825}
+    },
+    "path_resolution": {
+      "paths_checked": 11000,
+      "resolved_images": 11000,
+      "resolved_labels": 11000,
+      "failures": 0
+    }
+  },
+  "part1_baseline": {
+    "logistic_regression": {
+      "validation": {
+        "accuracy": 0.6061,
+        "precision": 0.9570,
+        "recall": 0.5933,
+        "f1": 0.7325,
+        "roc_auc": 0.7766
+      },
+      "test": {
+        "accuracy": 0.5758,
+        "precision": 0.9535,
+        "recall": 0.5607,
+        "f1": 0.7061,
+        "roc_auc": 0.7683
+      }
+    },
+    "rule_based_floor": {
+      "validation": {
+        "accuracy": 0.2903,
+        "precision": 1.0000,
+        "recall": 0.2193,
+        "f1": 0.3598
+      },
+      "test": {
+        "accuracy": 0.2848,
+        "precision": 1.0000,
+        "recall": 0.2133,
+        "f1": 0.3516
+      }
+    }
+  },
+  "part2_validators_full_dataset": {
+    "total_records_checked": 11000,
+    "format_valid_match_rate": 1.0000,
+    "checksum_valid_match_rate": 1.0000,
+    "format_invalid_checksum_valid_count": 998,
+    "exceptions": 0
+  },
+  "part3_live_real_image_validation": {
+    "sample_size": 180,
+    "average_latency_per_image_seconds": 0.895,
+    "live_ocr": {
+      "family_a": {
+        "n": 90,
+        "raw_text_obtained_rate": 1.000,
+        "structured_fields_any_rate": 1.000,
+        "structured_fields_all_rate": 0.889,
+        "per_field_presence": {
+          "name": 0.956,
+          "dob": 0.978,
+          "gender": 0.967,
+          "id_number": 1.000,
+          "address": 0.989
+        }
+      },
+      "family_b": {
+        "n": 90,
+        "raw_text_obtained_rate": 0.989,
+        "structured_fields_any_rate": 0.989,
+        "structured_fields_all_rate": 0.833,
+        "per_field_presence": {
+          "full_name": 0.944,
+          "registry_id": 0.978,
+          "entity_type": 0.956,
+          "jurisdiction_code": 0.922,
+          "registration_date": 0.956
+        }
+      }
+    },
+    "live_qr": {
+      "family_a": {
+        "n": 90,
+        "whole_image_detection_rate": 0.833,
+        "corner_hint_fallback_rate": 0.833,
+        "payload_parsed_rate": 0.833
+      },
+      "family_b": {
+        "n": 90,
+        "whole_image_detection_rate": 0.811,
+        "corner_hint_fallback_rate": 0.811,
+        "payload_parsed_rate": 0.811
+      }
+    },
+    "post_hoc_comparison_vs_m1": {
+      "qr_decoded_fields_exact_match": 0.822,
+      "ocr_extracted_fields_exact_match": 0.522,
+      "consistency_vector_exact_match": 0.478
+    }
+  },
+  "leakage_audit": {
+    "ast_check_clean": true,
+    "forbidden_keys_accessed_at_runtime": 0,
+    "external_directories_accessed": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "trials": [
+    {
+      "trial": 1,
+      "val_roc_auc": 0.5678,
+      "val_pr_auc": 0.9266
+    },
+    {
+      "trial": 2,
+      "val_roc_auc": 0.5765,
+      "val_pr_auc": 0.931
+    },
+    {
+      "trial": 3,
+      "val_roc_auc": 0.4898,
+      "val_pr_auc": 0.9102
+    },
+    {
+      "trial": 4,
+      "val_roc_auc": 0.5808,
+      "val_pr_auc": 0.9266
+    },
+    {
+      "trial": 5,
+      "val_roc_auc": 0.4983,
+      "val_pr_auc": 0.918
+    }
+  ],
+  "mean_roc_auc": 0.5426,
+  "mean_pr_auc": 0.9225,
+  "expected_roc_auc": 0.5,
+  "base_rate_pr_auc": 0.9091,
+  "status": "PASS: Classifier collapses to random baseline when labels are shuffled."
+}

@@ -1,0 +1,25 @@
+{
+  "rf_alone": {
+    "pr_auc": 0.9781,
+    "roc_auc": 0.8444
+  },
+  "hgb_alone": {
+    "pr_auc": 0.978,
+    "roc_auc": 0.8437
+  },
+  "ensemble_25_75": {
+    "pr_auc": 0.9782,
+    "roc_auc": 0.8447
+  },
+  "ensemble_50_50": {
+    "pr_auc": 0.9782,
+    "roc_auc": 0.8446
+  },
+  "ensemble_75_25": {
+    "pr_auc": 0.9781,
+    "roc_auc": 0.8444
+  },
+  "delta_pr_auc": 0.0001,
+  "delta_roc_auc": 0.0003,
+  "scientific_verdict": "MARGINAL. Gain is +0.0001 PR-AUC and +0.0003 ROC-AUC. Not a meaningful detection improvement and does not justify deploying dual models."
+}
