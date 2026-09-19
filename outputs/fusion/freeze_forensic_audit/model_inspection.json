@@ -1,0 +1,22 @@
+{
+  "model_path": "/Users/pavankumar/Desktop/CrossVerify_M3/outputs/fusion/final_fusion_freeze/final_fusion_model.joblib",
+  "file_size_bytes": 879,
+  "sha256": "4e8391922ec267865abecb2348c256ed6f6c981986876772bfa6f17ab81110d2",
+  "mtime_utc": "2026-09-16T10:14:23.284029+00:00",
+  "class_name": "LogisticRegression",
+  "classes": [
+    0,
+    1
+  ],
+  "coef": [
+    [
+      3.470975847501685,
+      7.209759054944582
+    ]
+  ],
+  "intercept": [
+    -1.8087318980585172
+  ],
+  "features_detected": null,
+  "conclusion": "The physical joblib artifact contains weights [3.47097585, 7.20975905] and intercept -1.8087319. It does NOT contain [5.0768, 4.4172] or -4.3949."
+}

@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-09-19T07:58:24.332229+00:00",
+  "phase": "Phase 1B-C Locked Corrected Fusion Final Test Evaluation",
+  "sample_counts": {
+    "total": 1650,
+    "genuine": 150,
+    "forged": 1500,
+    "unique_record_ids": 150
+  },
+  "operating_threshold": 0.82,
+  "classification_metrics": {
+    "accuracy": 0.885455,
+    "precision": 0.986637,
+    "recall": 0.886,
+    "f1_score": 0.933614,
+    "specificity": 0.88
+  },
+  "discrimination_metrics": {
+    "roc_auc": 0.93884,
+    "pr_auc": 0.99375
+  },
+  "confusion_matrix": {
+    "tn": 132,
+    "fp": 18,
+    "fn": 171,
+    "tp": 1329
+  },
+  "model_provenance": {
+    "m2_cnn_test_predictions_sha256": "fdaafab5e7b2477164b2b64709af2d44b17d0f23ff33c9f8c8e4877338b5e77b",
+    "m3_model_sha256": "a0d3dd8a4c544ecd307e0926addda7b0b4d3a187138c13307cd582d6500d55f3",
+    "corrected_fusion_model_sha256": "73931e2fa90b84f83b8d61348aeed9729a802bf52c0e80704f62f5f13a5281e2",
+    "test_split_sha256": "e489ba84aded8839815923cf948df1cc003e49730a31d12cddfc569bd5bce3df"
+  },
+  "historical_comparison_note": "Corrected fusion model trained strictly on 7,700 genuine 5-fold OOF predictions. Historical in-sample fusion result remains available for methodological comparison only."
+}

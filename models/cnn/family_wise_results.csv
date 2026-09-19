@@ -1,0 +1,3 @@
+family_name,n_samples,n_genuine,n_forged,accuracy,precision,recall,f1,roc_auc,pr_auc,mean_cnn_probability
+Family A,825,600,225,0.9636,0.9258,0.9422,0.9339,0.9867,0.9802,0.2945
+Family B,825,600,225,0.9297,0.8381,0.92,0.8771,0.9782,0.9646,0.3275

@@ -1,0 +1,10 @@
+metric_or_parameter,joblib_artifact_value,final_fusion_config_json,final_fusion_report_md,hallucinated_claim_in_response,reconciliation_status
+cnn_probability_weight (w_cnn),3.47098,3.47098,3.471,5.0768,Discrepancy resolved: joblib and all freeze artifacts strictly contain 3.4710. 5.0768 is a conversational hallucination.
+m3_probability_weight (w_m3),7.20976,7.20976,7.2098,4.4172,Discrepancy resolved: joblib and all freeze artifacts strictly contain 7.2098. 4.4172 is a conversational hallucination.
+intercept (b),-1.80873,-1.80873,-1.8087,-4.3949,Discrepancy resolved: joblib and all freeze artifacts strictly contain -1.8087. -4.3949 is a conversational hallucination.
+operating_threshold,N/A (model only),0.78,0.78,0.78,Consistent across all sources: 0.78.
+validation_pr_auc,0.99072,N/A,0.9907,0.9947,Discrepancy resolved: true validation PR-AUC is 0.99072. 0.9947 is a conversational hallucination.
+validation_roc_auc,0.92276,N/A,0.9228,0.9493,Discrepancy resolved: true validation ROC-AUC is 0.92276. 0.9493 is a conversational hallucination.
+validation_brier_score,0.05578,N/A,0.0558,0.0465,Discrepancy resolved: true validation Brier is 0.05578. 0.0465 is a conversational hallucination.
+validation_f1,0.9297,N/A,0.9297,0.9427,Discrepancy resolved: true validation F1 is 0.9297. 0.9427 is a conversational hallucination.
+validation_specificity,0.9,N/A,0.9,0.88,Discrepancy resolved: true validation specificity is 0.9000. 0.8800 is a conversational hallucination.

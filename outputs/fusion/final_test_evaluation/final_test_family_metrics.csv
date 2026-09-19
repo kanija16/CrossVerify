@@ -1,0 +1,3 @@
+document_family,N,roc_auc,pr_auc,accuracy,precision,recall,f1,specificity,fpr,tn,fp,fn,tp
+family_a,825,0.93803,0.99365,0.8921,0.9896,0.8907,0.9375,0.9067,0.0933,68,7,82,668
+family_b,825,0.9435,0.99421,0.8933,0.9825,0.8987,0.9387,0.84,0.16,63,12,76,674

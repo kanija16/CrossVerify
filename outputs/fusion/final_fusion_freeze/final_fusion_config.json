@@ -1,0 +1,27 @@
+{
+  "model_architecture": "LogisticRegression",
+  "features": [
+    "cnn_probability",
+    "m3_probability"
+  ],
+  "hyperparameters": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "random_state": 42
+  },
+  "learned_parameters": {
+    "cnn_probability_weight": 3.470975847501685,
+    "m3_probability_weight": 7.209759054944582,
+    "intercept": -1.8087318980585172
+  },
+  "training_data": {
+    "source": "outputs/fusion/train_oof_alignment.csv",
+    "description": "7,700 frozen-upstream training predictions from M2 ResNet18 and M3 Random Forest",
+    "samples": 7700,
+    "identities": 700
+  },
+  "selection_criterion": "Maximize F1 subject to Specificity >= 0.90 on canonical validation set",
+  "frozen_decision_threshold": 0.78,
+  "freeze_status": "FROZEN",
+  "test_set_access_status": "STRICTLY LOCKED \u2014 ZERO TEST ACCESS"
+}

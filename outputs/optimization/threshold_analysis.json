@@ -1,0 +1,87 @@
+{
+  "max_f1": {
+    "threshold": 0.243,
+    "precision": 0.9852,
+    "recall": 0.7107,
+    "f1": 0.8257,
+    "accuracy": 0.7273,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "precision_ge_0.95": {
+    "threshold": 0.243,
+    "precision": 0.9852,
+    "recall": 0.7107,
+    "f1": 0.8257,
+    "accuracy": 0.7273,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "precision_ge_0.97": {
+    "threshold": 0.243,
+    "precision": 0.9852,
+    "recall": 0.7107,
+    "f1": 0.8257,
+    "accuracy": 0.7273,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "precision_ge_0.98": {
+    "threshold": 0.243,
+    "precision": 0.9852,
+    "recall": 0.7107,
+    "f1": 0.8257,
+    "accuracy": 0.7273,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "precision_ge_0.99": {
+    "threshold": 0.404,
+    "precision": 0.9931,
+    "recall": 0.6693,
+    "f1": 0.7997,
+    "accuracy": 0.6952,
+    "confusion_matrix": [
+      [
+        143,
+        7
+      ],
+      [
+        496,
+        1004
+      ]
+    ]
+  }
+}

@@ -216,3 +216,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CrossVerify Project Specific Ignores
+
+# Model checkpoints
+*.pt
+models/cnn_oof/
+
+# Datasets / extracted image stores
+images/
+dataset_final_v2/
+__MACOSX/
+
+# Redundant root split copies
+data/*.csv
+
+# Temporary OOF fold chunks
+outputs/fusion/oof/partial_fold_*.csv
+

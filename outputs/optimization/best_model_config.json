@@ -1,0 +1,38 @@
+{
+  "model_name": "Random Forest (Optimized)",
+  "feature_set": "A0/A4 (15 features)",
+  "features": [
+    "qr_readable",
+    "text_qr_match_score",
+    "checksum_valid",
+    "format_valid",
+    "missing_field_count",
+    "ocr_field_presence_count",
+    "ocr_field_presence_rate",
+    "qr_field_count",
+    "ocr_qr_key_overlap_count",
+    "field_similarity__0",
+    "field_similarity__1",
+    "field_similarity__2",
+    "field_similarity__3",
+    "field_similarity__4",
+    "checksum_computed"
+  ],
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 8,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "calibration": "sigmoid (Platt)",
+  "selected_validation_threshold": 0.25,
+  "validation_metrics": {
+    "pr_auc": 0.9729,
+    "roc_auc": 0.8357,
+    "f1": 0.8257,
+    "precision": 0.9852,
+    "recall": 0.7107,
+    "brier_score_calibrated": 0.0709
+  },
+  "test_set_status": "LOCKED \u2014 NOT ACCESSED"
+}

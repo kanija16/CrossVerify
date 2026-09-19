@@ -1,0 +1,252 @@
+{
+  "ablation_ladder": [
+    {
+      "Candidate": "A0 Canonical RF",
+      "Features": "15 Canonical",
+      "Family handling": "None (Agnostic)",
+      "Model": "Random Forest",
+      "Val PR-AUC": 0.9729,
+      "Val ROC-AUC": 0.8357,
+      "Val F1": 0.8257,
+      "Val Precision": 0.9852,
+      "Val Recall": 0.7107,
+      "Threshold": 0.25,
+      "Brier": 0.177,
+      "Decision": "BASELINE REFERENCE"
+    },
+    {
+      "Candidate": "A1 Family + Canonical RF",
+      "Features": "15 Canonical + Family (16)",
+      "Family handling": "Context Feature",
+      "Model": "Random Forest",
+      "Val PR-AUC": 0.9781,
+      "Val ROC-AUC": 0.8444,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1757,
+      "Decision": "ACCEPTED (High Ranking, Dissected)"
+    },
+    {
+      "Candidate": "A2 Separate Family RFs",
+      "Features": "15 Canonical per family",
+      "Family handling": "Separate Models",
+      "Model": "Two Random Forests",
+      "Val PR-AUC": 0.9781,
+      "Val ROC-AUC": 0.844,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1755,
+      "Decision": "EXPLORED (Equivalent to A1)"
+    },
+    {
+      "Candidate": "A3 Family Interactions RF",
+      "Features": "15 + Family + 4 Interactions (20)",
+      "Family handling": "Explicit Interactions",
+      "Model": "Random Forest",
+      "Val PR-AUC": 0.9781,
+      "Val ROC-AUC": 0.8444,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.23,
+      "Brier": 0.1741,
+      "Decision": "REJECTED (Redundant over A1)"
+    },
+    {
+      "Candidate": "Canonical + Semantic Alignment",
+      "Features": "15 Canonical + 8 Semantic (23)",
+      "Family handling": "None (Agnostic)",
+      "Model": "Random Forest",
+      "Val PR-AUC": 0.9729,
+      "Val ROC-AUC": 0.8356,
+      "Val F1": 0.8257,
+      "Val Precision": 0.9852,
+      "Val Recall": 0.7107,
+      "Threshold": 0.25,
+      "Brier": 0.178,
+      "Decision": "REJECTED (Zero ranking gain over A0)"
+    },
+    {
+      "Candidate": "Canonical + Semantic + Family",
+      "Features": "15 + Family + 8 Semantic (24)",
+      "Family handling": "Context Feature",
+      "Model": "Random Forest",
+      "Val PR-AUC": 0.9781,
+      "Val ROC-AUC": 0.8443,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1763,
+      "Decision": "REJECTED (No gain over A1, higher complexity)"
+    },
+    {
+      "Candidate": "HistGradientBoosting (A0)",
+      "Features": "15 Canonical",
+      "Family handling": "None (Agnostic)",
+      "Model": "HistGradientBoosting",
+      "Val PR-AUC": 0.9726,
+      "Val ROC-AUC": 0.8336,
+      "Val F1": 0.8248,
+      "Val Precision": 0.9852,
+      "Val Recall": 0.7093,
+      "Threshold": 0.25,
+      "Brier": 0.1809,
+      "Decision": "EXPLORED (Competitive baseline)"
+    },
+    {
+      "Candidate": "HistGradientBoosting (Family)",
+      "Features": "15 Canonical + Family (16)",
+      "Family handling": "Context Feature",
+      "Model": "HistGradientBoosting",
+      "Val PR-AUC": 0.978,
+      "Val ROC-AUC": 0.8437,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1794,
+      "Decision": "EXPLORED"
+    },
+    {
+      "Candidate": "Ensemble 25RF/75HGB",
+      "Features": "15 Canonical + Family (16)",
+      "Family handling": "Context Feature",
+      "Model": "RF + HGB Ensemble",
+      "Val PR-AUC": 0.9782,
+      "Val ROC-AUC": 0.8447,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1781,
+      "Decision": "TOP CANDIDATE (Marginal +0.0001 PR-AUC)"
+    },
+    {
+      "Candidate": "Ensemble 50RF/50HGB",
+      "Features": "15 Canonical + Family (16)",
+      "Family handling": "Context Feature",
+      "Model": "RF + HGB Ensemble",
+      "Val PR-AUC": 0.9782,
+      "Val ROC-AUC": 0.8446,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1771,
+      "Decision": "EXPLORED"
+    },
+    {
+      "Candidate": "Ensemble 75RF/25HGB",
+      "Features": "15 Canonical + Family (16)",
+      "Family handling": "Context Feature",
+      "Model": "RF + HGB Ensemble",
+      "Val PR-AUC": 0.9781,
+      "Val ROC-AUC": 0.8444,
+      "Val F1": 0.9072,
+      "Val Precision": 0.94,
+      "Val Recall": 0.8767,
+      "Threshold": 0.22,
+      "Brier": 0.1763,
+      "Decision": "EXPLORED"
+    },
+    {
+      "Candidate": "Family-Only Negative Control",
+      "Features": "document_family only (1)",
+      "Family handling": "Family Only",
+      "Model": "Threshold / Linear",
+      "Val PR-AUC": 0.9091,
+      "Val ROC-AUC": 0.5,
+      "Val F1": 0.6452,
+      "Val Precision": 0.9091,
+      "Val Recall": 0.5,
+      "Threshold": 0.5,
+      "Brier": 0.5,
+      "Decision": "NEGATIVE CONTROL (Exact Random Chance)"
+    },
+    {
+      "Candidate": "A1 Calibrated RF",
+      "Features": "15 Canonical + Family (16)",
+      "Family handling": "Context Feature",
+      "Model": "Calibrated RF (Sigmoid)",
+      "Val PR-AUC": 0.9781,
+      "Val ROC-AUC": 0.8445,
+      "Val F1": 0.9524,
+      "Val Precision": 0.9091,
+      "Val Recall": 1.0,
+      "Threshold": 0.22,
+      "Brier": 0.0707,
+      "Decision": "CALIBRATION WINNER (Brier: 0.0709)"
+    }
+  ],
+  "attack_wise_validation": {
+    "checksum_invalid": {
+      "n_samples": 150,
+      "recall_a0": 1.0,
+      "recall_a1": 1.0,
+      "mean_score_a0": 0.9888,
+      "mean_score_a1": 0.9845
+    },
+    "coordinated_full_forgery": {
+      "n_samples": 150,
+      "recall_a0": 0.0933,
+      "recall_a1": 0.52,
+      "mean_score_a0": 0.2782,
+      "mean_score_a1": 0.277
+    },
+    "field_missing": {
+      "n_samples": 150,
+      "recall_a0": 1.0,
+      "recall_a1": 1.0,
+      "mean_score_a0": 0.9422,
+      "mean_score_a1": 0.9486
+    },
+    "fine_grained_edit": {
+      "n_samples": 150,
+      "recall_a0": 0.98,
+      "recall_a1": 0.98,
+      "mean_score_a0": 0.9049,
+      "mean_score_a1": 0.9104
+    },
+    "format_invalid": {
+      "n_samples": 150,
+      "recall_a0": 1.0,
+      "recall_a1": 1.0,
+      "mean_score_a0": 0.9887,
+      "mean_score_a1": 0.9875
+    },
+    "genuine": {
+      "n_samples": 150,
+      "specificity_a0": 0.8933,
+      "specificity_a1": 0.44,
+      "mean_score_a0": 0.274,
+      "mean_score_a1": 0.2726
+    },
+    "qr_only_mismatch": {
+      "n_samples": 150,
+      "recall_a0": 1.0,
+      "recall_a1": 1.0,
+      "mean_score_a0": 0.9417,
+      "mean_score_a1": 0.9417
+    },
+    "text_qr_mismatch": {
+      "n_samples": 150,
+      "recall_a0": 1.0,
+      "recall_a1": 1.0,
+      "mean_score_a0": 0.9347,
+      "mean_score_a1": 0.9354
+    },
+    "visual_splice": {
+      "n_samples": 450,
+      "recall_a0": 0.3444,
+      "recall_a1": 0.7556,
+      "mean_score_a0": 0.4496,
+      "mean_score_a1": 0.4524
+    }
+  },
+  "runtime_seconds": 2.74
+}

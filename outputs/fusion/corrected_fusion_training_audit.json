@@ -1,0 +1,63 @@
+{
+  "timestamp_utc": "2026-09-19T07:23:58.363792+00:00",
+  "overall_status": "PASS",
+  "checks": {
+    "check_a_row_count": {
+      "status": "PASS",
+      "value": 7700
+    },
+    "check_b_genuine_oof": {
+      "status": "PASS"
+    },
+    "check_c_no_val_in_fitting": {
+      "status": "PASS",
+      "overlap_records": 0
+    },
+    "check_d_no_test_in_fitting": {
+      "status": "PASS",
+      "overlap_records": 0
+    },
+    "check_e_oof_alignment": {
+      "status": "PASS"
+    },
+    "check_f_feature_order": {
+      "status": "PASS",
+      "feature_order": [
+        "cnn_probability_oof",
+        "m3_probability_oof"
+      ]
+    },
+    "check_g_model_parameters": {
+      "status": "PASS",
+      "C": 1.0,
+      "solver": "lbfgs",
+      "random_state": 42
+    },
+    "check_h_historical_preservation": {
+      "status": "PASS",
+      "verified_files": [
+        "outputs/fusion/train_oof_alignment.csv",
+        "outputs/fusion/final_fusion_freeze/final_fusion_model.joblib",
+        "outputs/fusion/final_fusion_freeze/final_fusion_config.json"
+      ]
+    },
+    "check_i_validation_isolation": {
+      "status": "PASS"
+    },
+    "check_j_threshold_search": {
+      "status": "PASS",
+      "selected_threshold": 0.82,
+      "specificity": 0.906667
+    },
+    "check_k_no_test_access": {
+      "status": "PASS"
+    }
+  },
+  "provenance": {
+    "corrected_oof_sha256": "c1ba7ac57fc0e0318234b554510bcac8d17bd36543e0b92b07905b6de3c11d7b",
+    "corrected_model_sha256": "73931e2fa90b84f83b8d61348aeed9729a802bf52c0e80704f62f5f13a5281e2",
+    "corrected_config_sha256": "d7b3de222465e6bbb20497644a6817a7d7f53c47c72b2670b8285749c506004a",
+    "val_upstream_predictions_sha256": "954a5b56ebf6e1afdefd2483d2fbcec8a78320f0ef99b23f15f0832823b43253",
+    "val_predictions_sha256": "a664a4fff949bcb8a2097e18d542c96d52f466ffd926203effd37c06e8b36d73"
+  }
+}

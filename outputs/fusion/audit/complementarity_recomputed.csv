@@ -1,0 +1,6 @@
+category,total_samples,both_correct,both_correct_pct,m2_correct_m3_wrong,m2_correct_m3_wrong_pct,m3_correct_m2_wrong,m3_correct_m2_wrong_pct,both_wrong,both_wrong_pct
+Overall,1650,320,19.39,287,17.39,880,53.33,163,9.88
+Genuine,150,128,85.33,15,10.0,6,4.0,1,0.67
+Visual splice,450,143,31.78,266,59.11,12,2.67,29,6.44
+Other forged,900,47,5.22,1,0.11,850,94.44,2,0.22
+Coordinated,150,2,1.33,5,3.33,12,8.0,131,87.33

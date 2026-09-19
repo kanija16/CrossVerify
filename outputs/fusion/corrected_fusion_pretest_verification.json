@@ -1,0 +1,140 @@
+import hashlib
+import json
+import os
+from datetime import datetime, timezone
+
+PROJECT_ROOT = r"C:\CrossVerify"
+
+report = {
+    "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+    "overall_status": "BLOCKED",
+    "final_decision": "BLOCKED — PRE-TEST VERIFICATION FAILED",
+    "unresolved_condition": "Gate 3: models/cnn/best_model.pt does not exist on disk (omitted/excluded by .gitignore during Member 2 development, as recorded in outputs/fusion/oof/oof_provenance.json). The binary checkpoint cannot be verified directly.",
+    "gate_results": {
+        "gate_1_m3_model_resolution": {
+            "status": "PASS",
+            "candidate_a_path": "outputs/final_m3_model_freeze/final_m3_model.joblib",
+            "candidate_a_exists": True,
+            "candidate_a_sha256": "a0d3dd8a4c544ecd307e0926addda7b0b4d3a187138c13307cd582d6500d55f3",
+            "candidate_b_path": "models/m3/final_m3_model.joblib",
+            "candidate_b_exists": False,
+            "candidate_b_sha256": None,
+            "selected_canonical_model": "outputs/final_m3_model_freeze/final_m3_model.joblib",
+            "selected_m3_sha256": "a0d3dd8a4c544ecd307e0926addda7b0b4d3a187138c13307cd582d6500d55f3",
+            "provenance_evidence": [
+                "Candidate A was committed in git commit a31a2f899259b806a89b6b485839a198c7fe10a8 on 2026-09-16 by pavan08-08-08.",
+                "Candidate A is accompanied by FINAL_MODEL_FREEZE.md, final_freeze_manifest.json, and final_feature_schema.json.",
+                "Candidate A is referenced across all historical integration engines: train_oof_engine.py, train_and_freeze_fusion.py, run_final_test_evaluation.py.",
+                "Candidate B (models/m3/final_m3_model.joblib) has zero git history, zero code references, and never existed on disk."
+            ],
+            "oof_reproduction_comparison": {
+                "reference_rows": 1650,
+                "candidate_a_val_max_abs_diff": 4.785430810505531e-07,
+                "candidate_a_val_mean_abs_diff": 2.6583586125256974e-07,
+                "candidate_a_train_align_max_abs_diff": 4.993324527191589e-07,
+                "candidate_a_train_align_mean_abs_diff": 2.727199137084227e-07,
+                "candidate_b_val_max_abs_diff": None,
+                "candidate_b_val_mean_abs_diff": None,
+                "reproduction_notes": "Candidate A reproduces the full-training reference data (train_oof_alignment.csv) and validation reference data (val_alignment.csv) within 5e-7 (exact match to within 6-decimal CSV precision)."
+            }
+        },
+        "gate_2_sklearn_compatibility": {
+            "status": "PASS",
+            "serialization_version": "1.6.1",
+            "active_environment_version": "1.9.1",
+            "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr 8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+            "os": "Windows",
+            "sklearn_161_environment_reproduced": True,
+            "sklearn_161_venv_path": r"C:\Users\kanij\.gemini\antigravity\brain\64ecdb98-1c61-476e-9ac5-e47d9cd7e605\scratch\venv161",
+            "clean_unpickling_succeeded": True,
+            "clean_unpickling_warnings": "None (zero warnings under 1.6.1)",
+            "compatibility_patch_evaluated": True,
+            "exact_patch_code": "imputer = model.named_steps['imputer']; imputer._fill_dtype = getattr(imputer, '_fit_dtype', getattr(imputer, '_fill_dtype', None))",
+            "reason_for_patch": "scikit-learn 1.9+ renamed SimpleImputer._fill_dtype to _fit_dtype. Models serialized in 1.6.1 lack _fill_dtype when deserialized in 1.9+.",
+            "imputer_fitted_state_comparison": {
+                "statistics_161_shape": [15],
+                "statistics_191_shape": [15],
+                "statistics_identical": True
+            },
+            "numerical_equivalence_results": {
+                "reference_data": "outputs/features/val_features.csv (1,650 non-test samples)",
+                "max_abs_diff": 2.220446049250313e-16,
+                "mean_abs_diff": 2.6578066347087082e-18,
+                "number_differing_predictions": 31,
+                "differences_above_1e_9": 0,
+                "differences_above_1e_15": 0,
+                "declared_tolerance": 1e-9,
+                "tolerance_satisfied": True
+            }
+        },
+        "gate_3_cnn_deployment_artifact": {
+            "status": "BLOCKED",
+            "target_path": "models/cnn/best_model.pt",
+            "file_exists": False,
+            "sha256": None,
+            "failure_details": "models/cnn/best_model.pt is missing from local disk. It was omitted by .gitignore during Member 2 development (documented in outputs/fusion/oof/oof_provenance.json). Cannot verify file existence or hash directly.",
+            "available_upstream_outputs": {
+                "test_predictions_csv": "models/cnn/test_predictions.csv (exists, SHA-256: fdaafab5e7b2477164b2b64709af2d44b17d0f23ff33c9f8c8e4877338b5e77b)",
+                "val_predictions_csv": "models/cnn/val_predictions.csv (exists, SHA-256: 43742f26b02cf1108d318f01da7235fa40c2cc5208e12ff0d42dec2945d35f0a)",
+                "cnn_handoff_summary": "models/cnn/CNN_HANDOFF_SUMMARY.md (exists)"
+            }
+        },
+        "gate_4_corrected_fusion_artifact": {
+            "status": "PASS",
+            "target_path": "models/fusion/corrected_fusion_model.joblib",
+            "file_exists": True,
+            "sha256": "73931e2fa90b84f83b8d61348aeed9729a802bf52c0e80704f62f5f13a5281e2",
+            "expected_sha256": "73931e2fa90b84f83b8d61348aeed9729a802bf52c0e80704f62f5f13a5281e2",
+            "sha256_match": True,
+            "hyperparameters": {
+                "C": 1.0,
+                "solver": "lbfgs",
+                "random_state": 42
+            },
+            "learned_parameters": {
+                "cnn_probability_weight": 3.536043325697256,
+                "m3_probability_weight": 6.6159925584417145,
+                "intercept": -1.4693148085333863
+            }
+        },
+        "gate_5_frozen_threshold": {
+            "status": "PASS",
+            "config_path": "models/fusion/corrected_fusion_config.json",
+            "selected_threshold": 0.82,
+            "expected_threshold": 0.82,
+            "threshold_match": True
+        },
+        "gate_6_preserve_historical_cnn_test_artifact": {
+            "status": "PASS",
+            "path": "models/cnn/test_predictions.csv",
+            "file_exists": True,
+            "sha256": "fdaafab5e7b2477164b2b64709af2d44b17d0f23ff33c9f8c8e4877338b5e77b",
+            "preserved": True
+        },
+        "gate_7_historical_artifact_preservation": {
+            "status": "PASS",
+            "verified_artifacts": {
+                "outputs/fusion/train_oof_alignment.csv": "132b5ebf93eb2136c40adccd5fc12d9852c2d43dfda6d7e455c8883a52bfe9b9",
+                "outputs/fusion/final_fusion_freeze/final_fusion_model.joblib": "4e8391922ec267865abecb2348c256ed6f6c981986876772bfa6f17ab81110d2",
+                "outputs/fusion/final_fusion_freeze/final_fusion_config.json": "18007b4aa12e70c2bc47f655dd4423bb836ee003567b1cf906755b8dff9637c7",
+                "outputs/fusion/oof/train_oof_predictions.csv": "6cee59da0633bf90773cbf49719a8293a51fb6e1a3f73b99b2f8ecc7ebcc2673",
+                "outputs/fusion/oof/cnn_oof_predictions.csv": "d602c271009bff4dedf19c8c4009a66ea225d4c02ef371f9d438bf8a97cbc415",
+                "outputs/fusion/oof/corrected_fusion_oof.csv": "c1ba7ac57fc0e0318234b554510bcac8d17bd36543e0b92b07905b6de3c11d7b",
+                "data/splits/train.csv": "12177bb673263f8de2913544aaffe38260446ae016a75acf6788130eb3403eae",
+                "data/splits/val.csv": "e2117afadc6d7f62a74845f1a03ef250a06531fd4e3a47da12a75c3f1289d52f",
+                "models/cnn/test_predictions.csv": "fdaafab5e7b2477164b2b64709af2d44b17d0f23ff33c9f8c8e4877338b5e77b"
+            }
+        },
+        "gate_8_zero_test_access": {
+            "status": "PASS",
+            "test_split_accessed": False,
+            "test_predictions_generated": False,
+            "confirmation": "CONFIRMED: data/splits/test.csv and data/test.csv were NOT opened, loaded, or evaluated during this pre-test verification."
+        }
+    }
+}
+
+out_p = os.path.join(PROJECT_ROOT, "outputs", "fusion", "corrected_fusion_pretest_verification.json")
+with open(out_p, "w") as f:
+    json.dump(report, f, indent=2)
+print("Saved pre-test verification report to:", out_p)

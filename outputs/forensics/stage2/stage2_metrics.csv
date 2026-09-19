@@ -1,0 +1,6 @@
+candidate_id,description,input_features,weights,intercept,pr_auc,roc_auc,brier_score,threshold,accuracy,precision,recall,f1,specificity,fpr,tn,fp,fn,tp
+B0_2Way_Baseline,"Existing 2-way frozen fusion baseline [cnn_prob, m3_prob]","['cnn_probability', 'm3_probability']","[3.471, 7.2098]",-1.8087,0.99072,0.92276,0.05578,0.7799999999999999,0.8794,0.9887,0.8773,0.9297,0.9,0.1,135,15,184,1316
+B1_3Way_RF,"3-way learned fusion [cnn_prob, m3_prob, forensic_rf_prob]","['cnn_probability', 'm3_probability', 'forensic_probability']","[2.8386, 2.2841, 16.9557]",-13.0926,0.98908,0.90955,0.06565,0.95,0.8448,0.9898,0.838,0.9076,0.9133,0.0867,137,13,243,1257
+B2_3Way_HGB,"3-way learned fusion [cnn_prob, m3_prob, forensic_hgb_prob]","['cnn_probability', 'm3_probability', 'forensic_probability']","[2.7404, 2.7997, 14.5129]",-10.9037,0.98765,0.89528,0.07805,0.95,0.8418,0.9762,0.8467,0.9068,0.7933,0.2067,119,31,230,1270
+B3_2Way_A2_RF,"2-way direct fusion [cnn_prob, forensic_rf_prob]","['cnn_probability', 'forensic_probability']","[2.6986, 19.0408]",-13.9663,0.98796,0.90281,0.06753,0.95,0.8412,0.9897,0.834,0.9052,0.9133,0.0867,137,13,249,1251
+B4_2Way_A2_HGB,"2-way direct fusion [cnn_prob, forensic_hgb_prob]","['cnn_probability', 'forensic_probability']","[2.6023, 16.4374]",-11.4383,0.98641,0.88605,0.08164,0.95,0.8491,0.9721,0.8587,0.9119,0.7533,0.2467,113,37,212,1288

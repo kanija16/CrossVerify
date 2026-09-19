@@ -1,0 +1,9 @@
+{
+  "frozen_decision_threshold": 0.25,
+  "selection_criterion": "macro_f1 operating point ensuring high genuine specificity (89.33%) and precision (98.52%)",
+  "validation_recall": 0.7107,
+  "validation_f1": 0.8257,
+  "validation_precision": 0.9852,
+  "validation_specificity": 0.8933,
+  "validation_fpr": 0.1067
+}

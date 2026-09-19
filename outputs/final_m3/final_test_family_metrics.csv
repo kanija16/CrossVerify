@@ -1,0 +1,3 @@
+family,n_samples,test_pr_auc,test_roc_auc,precision,recall,specificity,f1,tn,fp,fn,tp
+family_a,825,0.977,0.8638,0.9895,0.756,0.92,0.8571,69,6,183,567
+family_b,825,0.9703,0.8222,0.9865,0.6827,0.9067,0.8069,68,7,238,512

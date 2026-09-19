@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-09-14T11:56:17+0530",
+  "random_seed": 42,
+  "python_version": "3.13.5",
+  "sklearn_version": "1.6.1",
+  "features": {
+    "no_family_features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed"
+    ],
+    "with_family_features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed",
+      "document_family"
+    ],
+    "total_no_family": 15,
+    "total_with_family": 16
+  },
+  "selected_model": "random_forest",
+  "selected_threshold": 0.25,
+  "splits": {
+    "train_identities": 700,
+    "train_samples": 7700,
+    "val_identities": 150,
+    "val_samples": 1650,
+    "test_identities": 150,
+    "test_samples": 1650
+  }
+}

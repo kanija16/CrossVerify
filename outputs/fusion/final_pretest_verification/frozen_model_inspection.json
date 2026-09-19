@@ -1,0 +1,51 @@
+{
+  "inspection_timestamp": "2026-09-16T14:28:55.294864+00:00",
+  "model_type": "<class 'sklearn.linear_model._logistic.LogisticRegression'>",
+  "classes_": [
+    0,
+    1
+  ],
+  "coef_": [
+    [
+      3.470975847501685,
+      7.209759054944582
+    ]
+  ],
+  "intercept_": [
+    -1.8087318980585172
+  ],
+  "exact_formula": "logit = 3.470975847501685 * cnn_probability + 7.209759054944582 * m3_probability + -1.8087318980585172",
+  "config_threshold": 0.78,
+  "validation_operating_threshold": 0.78,
+  "features_in_schema": [
+    "cnn_probability",
+    "m3_probability"
+  ],
+  "validation_metrics": {
+    "pr_auc": 0.99072,
+    "roc_auc": 0.92276,
+    "brier_score": 0.05578,
+    "f1": 0.9297,
+    "precision": 0.9887,
+    "recall": 0.8773,
+    "specificity": 0.9,
+    "fpr": 0.1,
+    "accuracy": 0.8794,
+    "confusion_matrix": {
+      "tn": 135,
+      "fp": 15,
+      "fn": 184,
+      "tp": 1316
+    }
+  },
+  "checks_passed": {
+    "classes_is_0_1": true,
+    "coef_matches_exact": true,
+    "intercept_matches_exact": true,
+    "threshold_is_0_78": true,
+    "val_metrics_exact_match": true,
+    "stage1_stage2_stage3_no_overwrite": true,
+    "inference_script_pure": true,
+    "zero_test_access": true
+  }
+}

@@ -1,0 +1,151 @@
+[
+  {
+    "exp_id": "EXP-00",
+    "feature_set": "A4 (15 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_split": 4
+    },
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8357,
+    "val_f1": 0.8257,
+    "threshold": 0.25,
+    "decision": "BASELINE",
+    "reason": "Current Part 4 reference baseline on validation"
+  },
+  {
+    "exp_id": "EXP-01",
+    "feature_set": "A4 (15 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8
+    },
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8357,
+    "val_f1": 0.8257,
+    "threshold": 0.243,
+    "decision": "ANALYZED",
+    "reason": "Operating point sweep: max F1 at th=0.243, prec=0.9852"
+  },
+  {
+    "exp_id": "EXP-02",
+    "feature_set": "A4 (15 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "cv_score": 0.9734,
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8357,
+    "decision": "ACCEPTED",
+    "reason": "Optimal hyperparameter config via 5-fold GroupKFold: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt'}"
+  },
+  {
+    "exp_id": "EXP-LADDER-A0",
+    "feature_set": "A0 (15 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8357,
+    "val_f1": 0.8257,
+    "threshold": 0.25,
+    "decision": "ACCEPTED",
+    "reason": "Ablation evaluation for A0"
+  },
+  {
+    "exp_id": "EXP-LADDER-B1",
+    "feature_set": "B1 (19 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8354,
+    "val_f1": 0.8257,
+    "threshold": 0.25,
+    "decision": "ACCEPTED",
+    "reason": "Ablation evaluation for B1"
+  },
+  {
+    "exp_id": "EXP-LADDER-B2",
+    "feature_set": "B2 (20 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "val_pr_auc": 0.9728,
+    "val_roc_auc": 0.8351,
+    "val_f1": 0.8257,
+    "threshold": 0.25,
+    "decision": "EXPLORED",
+    "reason": "Ablation evaluation for B2"
+  },
+  {
+    "exp_id": "EXP-LADDER-B3",
+    "feature_set": "B3 (25 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "val_pr_auc": 0.9728,
+    "val_roc_auc": 0.8349,
+    "val_f1": 0.8257,
+    "threshold": 0.25,
+    "decision": "EXPLORED",
+    "reason": "Ablation evaluation for B3"
+  },
+  {
+    "exp_id": "EXP-LADDER-B4",
+    "feature_set": "B4 (28 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "val_pr_auc": 0.9728,
+    "val_roc_auc": 0.8352,
+    "val_f1": 0.8257,
+    "threshold": 0.24,
+    "decision": "EXPLORED",
+    "reason": "Ablation evaluation for B4"
+  },
+  {
+    "exp_id": "EXP-LADDER-B5",
+    "feature_set": "B5 (31 features)",
+    "model": "Random Forest",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8355,
+    "val_f1": 0.8257,
+    "threshold": 0.24,
+    "decision": "ACCEPTED",
+    "reason": "Ablation evaluation for B5"
+  }
+]

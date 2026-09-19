@@ -1,0 +1,7 @@
+artifact_name,rel_path,size_bytes,mtime_epoch,mtime_iso,sha256
+m2_model,models/cnn/best_model.pt,134256709,1789541918.0618784,2026-09-16T06:58:38.061878+00:00,93641580863cc8b7ce4a11144157c1dfd42ab416aa7a4132e26fa0dda3711bf6
+m3_model,outputs/final_m3_model_freeze/final_m3_model.joblib,609922,1789373612.0221066,2026-09-14T08:13:32.022107+00:00,a0d3dd8a4c544ecd307e0926addda7b0b4d3a187138c13307cd582d6500d55f3
+fusion_model,outputs/fusion/final_fusion_freeze/final_fusion_model.joblib,879,1789553663.2840285,2026-09-16T10:14:23.284029+00:00,4e8391922ec267865abecb2348c256ed6f6c981986876772bfa6f17ab81110d2
+fusion_config,outputs/fusion/final_fusion_freeze/final_fusion_config.json,830,1789553663.2857368,2026-09-16T10:14:23.285737+00:00,b9435eb7c6534663f335960735001587e51ffc044cc6e7177641deec72d0c03c
+fusion_schema,outputs/fusion/final_fusion_freeze/final_fusion_feature_schema.json,482,1789553663.2850065,2026-09-16T10:14:23.285007+00:00,a2b602b87bbfafed24367edaf8d9a3b264de7b1be2cfbf43e3db76d3048e1842
+fusion_validation_metrics,outputs/fusion/final_fusion_freeze/final_fusion_validation_metrics.json,1997,1789553663.2878923,2026-09-16T10:14:23.287892+00:00,948cfe117e2bc581fde1429117e38ba333d01b0477907ff9c3a17552a0d9440e
