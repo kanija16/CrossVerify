@@ -1,0 +1,82 @@
+{
+  "target": "final_label",
+  "best_epoch": 23,
+  "validation": {
+    "roc_auc": 0.71408,
+    "pr_auc": 0.96524,
+    "threshold": 0.7,
+    "recall": 0.4713,
+    "specificity": 0.9,
+    "precision": 0.9792,
+    "f1": 0.6364,
+    "confusion_matrix": {
+      "tn": 135,
+      "fp": 15,
+      "fn": 793,
+      "tp": 707
+    }
+  },
+  "test": {
+    "roc_auc": 0.72968,
+    "pr_auc": 0.96762,
+    "threshold": 0.7,
+    "recall": 0.4747,
+    "specificity": 0.9,
+    "precision": 0.9794,
+    "f1": 0.6394,
+    "confusion_matrix": {
+      "tn": 135,
+      "fp": 15,
+      "fn": 788,
+      "tp": 712
+    }
+  },
+  "test_flag_rate_by_tamper_type": [
+    {
+      "tamper_type": "checksum_invalid",
+      "cnn_e2e": 0.12,
+      "fusion": 1.0
+    },
+    {
+      "tamper_type": "coordinated_full_forgery",
+      "cnn_e2e": 0.1333,
+      "fusion": 0.14
+    },
+    {
+      "tamper_type": "field_missing",
+      "cnn_e2e": 1.0,
+      "fusion": 0.9733
+    },
+    {
+      "tamper_type": "fine_grained_edit",
+      "cnn_e2e": 0.1333,
+      "fusion": 0.9733
+    },
+    {
+      "tamper_type": "format_invalid",
+      "cnn_e2e": 0.7467,
+      "fusion": 1.0
+    },
+    {
+      "tamper_type": "genuine",
+      "cnn_e2e": 0.1,
+      "fusion": 0.12
+    },
+    {
+      "tamper_type": "qr_only_mismatch",
+      "cnn_e2e": 0.0667,
+      "fusion": 0.96
+    },
+    {
+      "tamper_type": "text_qr_mismatch",
+      "cnn_e2e": 0.12,
+      "fusion": 0.94
+    },
+    {
+      "tamper_type": "visual_splice",
+      "cnn_e2e": 0.8089,
+      "fusion": 0.9578
+    }
+  ],
+  "note": "Flag rate = recall for forgery types and false-positive rate for 'genuine'."
+}

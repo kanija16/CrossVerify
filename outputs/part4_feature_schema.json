@@ -1,0 +1,157 @@
+{
+  "version": "1.0.0",
+  "num_features_no_family": 15,
+  "num_features_with_family": 16,
+  "features": [
+    {
+      "index": 0,
+      "name": "qr_readable",
+      "type": "binary",
+      "range": [0.0, 1.0],
+      "group": "core_consistency",
+      "description": "1.0 if live QR detector localized and decoded a valid payload, 0.0 otherwise."
+    },
+    {
+      "index": 1,
+      "name": "text_qr_match_score",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "core_consistency",
+      "missing_representation": "NaN",
+      "description": "Mean text similarity between common OCR and QR fields. Preserved as NaN when QR is unreadable or OCR unavailable."
+    },
+    {
+      "index": 2,
+      "name": "checksum_valid",
+      "type": "binary",
+      "range": [0.0, 1.0],
+      "group": "core_consistency",
+      "description": "1.0 if identifier passes family checksum (Verhoeff for Family A, Mod-11 for Family B), 0.0 otherwise."
+    },
+    {
+      "index": 3,
+      "name": "format_valid",
+      "type": "binary",
+      "range": [0.0, 1.0],
+      "group": "core_consistency",
+      "description": "1.0 if identifier satisfies canonical regex format rules, 0.0 otherwise."
+    },
+    {
+      "index": 4,
+      "name": "missing_field_count",
+      "type": "integer",
+      "range": [0.0, 5.0],
+      "group": "core_consistency",
+      "description": "Number of expected family fields that could not be extracted from OCR."
+    },
+    {
+      "index": 5,
+      "name": "ocr_field_presence_count",
+      "type": "integer",
+      "range": [0.0, 5.0],
+      "group": "coverage",
+      "description": "Count of non-null, non-empty fields successfully parsed from live OCR."
+    },
+    {
+      "index": 6,
+      "name": "ocr_field_presence_rate",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "coverage",
+      "description": "Fraction of expected fields present in OCR output (count / 5.0)."
+    },
+    {
+      "index": 7,
+      "name": "qr_field_count",
+      "type": "integer",
+      "range": [0.0, 5.0],
+      "group": "coverage",
+      "description": "Count of non-null, non-empty fields decoded from live QR payload."
+    },
+    {
+      "index": 8,
+      "name": "ocr_qr_key_overlap_count",
+      "type": "integer",
+      "range": [0.0, 5.0],
+      "group": "coverage",
+      "description": "Count of field names simultaneously present and non-empty in both OCR and QR dictionaries."
+    },
+    {
+      "index": 9,
+      "name": "field_similarity__0",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "per_field_similarity",
+      "missing_representation": "NaN",
+      "description": "Similarity for Field Slot 0 (Family A: 'name', Family B: 'full_name'). NaN if either is missing."
+    },
+    {
+      "index": 10,
+      "name": "field_similarity__1",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "per_field_similarity",
+      "missing_representation": "NaN",
+      "description": "Similarity for Field Slot 1 (Family A: 'dob', Family B: 'registry_id'). NaN if either is missing."
+    },
+    {
+      "index": 11,
+      "name": "field_similarity__2",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "per_field_similarity",
+      "missing_representation": "NaN",
+      "description": "Similarity for Field Slot 2 (Family A: 'gender', Family B: 'entity_type'). NaN if either is missing."
+    },
+    {
+      "index": 12,
+      "name": "field_similarity__3",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "per_field_similarity",
+      "missing_representation": "NaN",
+      "description": "Similarity for Field Slot 3 (Family A: 'id_number', Family B: 'jurisdiction_code'). NaN if either is missing."
+    },
+    {
+      "index": 13,
+      "name": "field_similarity__4",
+      "type": "continuous",
+      "range": [0.0, 1.0],
+      "group": "per_field_similarity",
+      "missing_representation": "NaN",
+      "description": "Similarity for Field Slot 4 (Family A: 'address', Family B: 'registration_date'). NaN if either is missing."
+    },
+    {
+      "index": 14,
+      "name": "checksum_computed",
+      "type": "binary",
+      "range": [0.0, 1.0],
+      "group": "validator_detail",
+      "description": "1.0 if OCR identifier field was present and non-empty so checksum could be evaluated, 0.0 if missing."
+    },
+    {
+      "index": 15,
+      "name": "document_family",
+      "type": "categorical_binary",
+      "range": [0.0, 1.0],
+      "group": "context",
+      "description": "0.0 for Family A, 1.0 for Family B. Included only in A5 and A6 as context / negative control."
+    }
+  ],
+  "family_field_slot_mapping": {
+    "family_a": {
+      "slot_0": "name",
+      "slot_1": "dob",
+      "slot_2": "gender",
+      "slot_3": "id_number",
+      "slot_4": "address"
+    },
+    "family_b": {
+      "slot_0": "full_name",
+      "slot_1": "registry_id",
+      "slot_2": "entity_type",
+      "slot_3": "jurisdiction_code",
+      "slot_4": "registration_date"
+    }
+  }
+}

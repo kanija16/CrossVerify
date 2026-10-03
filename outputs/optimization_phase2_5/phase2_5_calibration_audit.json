@@ -1,0 +1,12 @@
+{
+  "fitting_data": "TRAIN ONLY (via internal 5-fold cross-validation)",
+  "validation_data_leakage": "ZERO. Validation split evaluated strictly post-fit.",
+  "uncalibrated_brier": 0.1757,
+  "calibrated_brier": 0.0707,
+  "brier_reduction_pct": 59.76,
+  "uncalibrated_pr_auc": 0.9781,
+  "calibrated_pr_auc": 0.9781,
+  "uncalibrated_roc_auc": 0.8444,
+  "calibrated_roc_auc": 0.8445,
+  "ranking_retention": "PERFECT. Sigmoid (Platt) scaling is strictly monotonic, preserving bit-identical ranking."
+}

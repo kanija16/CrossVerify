@@ -1,0 +1,4 @@
+model,pr_auc,roc_auc,brier_score,threshold,accuracy,precision,recall,f1,specificity,fpr,tn,fp,fn,tp
+"M2 ResNet18 (post-hoc general-forgery diagnostic using CNN probability, t=0.50)",0.94818,0.60012,0.58015,0.5,0.3709,0.9853,0.3127,0.4747,0.9533,0.0467,143,7,1031,469
+"M3 Cross-Modal (Frozen Random Forest, tau=0.25)",0.97371,0.84356,0.17132,0.25,0.737,0.9881,0.7193,0.8326,0.9133,0.0867,137,13,421,1079
+"Final Frozen Fusion (Logistic Regression, tau=0.78)",0.9938,0.93921,0.05168,0.78,0.8927,0.986,0.8947,0.9381,0.8733,0.1267,131,19,158,1342

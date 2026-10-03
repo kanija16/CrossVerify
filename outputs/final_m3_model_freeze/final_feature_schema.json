@@ -1,0 +1,35 @@
+{
+  "feature_order": [
+    "qr_readable",
+    "text_qr_match_score",
+    "checksum_valid",
+    "format_valid",
+    "missing_field_count",
+    "ocr_field_presence_count",
+    "ocr_field_presence_rate",
+    "qr_field_count",
+    "ocr_qr_key_overlap_count",
+    "field_similarity__0",
+    "field_similarity__1",
+    "field_similarity__2",
+    "field_similarity__3",
+    "field_similarity__4",
+    "checksum_computed"
+  ],
+  "forbidden_features_verified_absent": [
+    "target",
+    "final_label",
+    "tamper_type",
+    "image_path",
+    "cnn_label",
+    "record_id",
+    "expected_consistency_vector",
+    "label_path",
+    "id",
+    "manifest_id",
+    "ground_truth_fields",
+    "fine_grained_metadata",
+    "splice_metadata"
+  ],
+  "total_features": 15
+}

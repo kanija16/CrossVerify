@@ -1,0 +1,10 @@
+tamper_type,role,metric_name,total_samples,correct_predictions,rate,mean_fusion_probability
+checksum_invalid,forged_attack,recall,150,150,1.0,0.994662
+coordinated_full_forgery,forged_attack,recall,150,21,0.14,0.632923
+field_missing,forged_attack,recall,150,146,0.9733,0.986348
+fine_grained_edit,forged_attack,recall,150,146,0.9733,0.985537
+format_invalid,forged_attack,recall,150,150,1.0,0.993175
+genuine,genuine,specificity,150,132,0.88,0.612685
+qr_only_mismatch,forged_attack,recall,150,144,0.96,0.985797
+text_qr_mismatch,forged_attack,recall,150,141,0.94,0.981162
+visual_splice,forged_attack,recall,450,431,0.9578,0.966187

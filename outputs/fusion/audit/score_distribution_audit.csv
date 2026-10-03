@@ -1,0 +1,25 @@
+category,signal_name,n_samples,mean,median,std,min,max,q25,q75
+Genuine,cnn_probability,150,0.0926,0.0165,0.1888,0.0001,0.9999,0.0037,0.0862
+Genuine,g_cnn_transformed,150,0.8884,0.878,0.023,0.8743,0.9782,0.8755,0.8907
+Genuine,m3_calibrated_probability,150,0.772,0.7542,0.0534,0.7542,0.9914,0.7542,0.7542
+Genuine,p_fusion_alpha_005,150,0.7778,0.7605,0.0508,0.7602,0.9895,0.7603,0.7617
+Genuine,p_fusion_alpha_070,150,0.8535,0.8419,0.0231,0.8383,0.9758,0.8394,0.8583
+Genuine,stacker_probability,150,0.741,0.6954,0.0824,0.6787,0.9917,0.6878,0.7651
+Visual Splice,cnn_probability,450,0.909,0.9999,0.2644,0.0006,1.0,0.9994,1.0
+Visual Splice,g_cnn_transformed,450,0.9685,0.9768,0.0256,0.8744,0.9782,0.9752,0.978
+Visual Splice,m3_calibrated_probability,450,0.8288,0.7542,0.1059,0.7542,0.9952,0.7542,0.99
+Visual Splice,p_fusion_alpha_005,450,0.8358,0.7654,0.1007,0.7602,0.9944,0.7653,0.9888
+Visual Splice,p_fusion_alpha_070,450,0.9266,0.9108,0.0372,0.8383,0.9833,0.9093,0.967
+Visual Splice,stacker_probability,450,0.9566,0.9653,0.0635,0.6795,0.995,0.9625,0.9918
+Coordinated Full Forgery,cnn_probability,150,0.0906,0.0169,0.1766,0.0001,0.9961,0.0034,0.0844
+Coordinated Full Forgery,g_cnn_transformed,150,0.8884,0.8784,0.022,0.8743,0.9778,0.8755,0.8904
+Coordinated Full Forgery,m3_calibrated_probability,150,0.7714,0.7542,0.0557,0.7542,0.9942,0.7542,0.7542
+Coordinated Full Forgery,p_fusion_alpha_005,150,0.7772,0.7605,0.053,0.7602,0.9892,0.7603,0.7614
+Coordinated Full Forgery,p_fusion_alpha_070,150,0.8533,0.8416,0.024,0.8383,0.9666,0.8391,0.8539
+Coordinated Full Forgery,stacker_probability,150,0.7382,0.6958,0.0824,0.6786,0.9891,0.6869,0.743
+Other Forged,cnn_probability,900,0.0804,0.0076,0.1892,0.0,0.9999,0.0011,0.0442
+Other Forged,g_cnn_transformed,900,0.8862,0.8764,0.0229,0.8743,0.9782,0.875,0.8832
+Other Forged,m3_calibrated_probability,900,0.9895,0.995,0.0246,0.7542,0.9953,0.9941,0.9952
+Other Forged,p_fusion_alpha_005,900,0.9843,0.9892,0.0234,0.7603,0.9944,0.9887,0.9894
+Other Forged,p_fusion_alpha_070,900,0.9172,0.9118,0.0176,0.8386,0.9833,0.9109,0.9164
+Other Forged,stacker_probability,900,0.9418,0.9393,0.023,0.6797,0.995,0.9372,0.9436

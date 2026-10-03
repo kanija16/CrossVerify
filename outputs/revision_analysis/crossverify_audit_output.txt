@@ -1,0 +1,82 @@
+
+==============================================================================
+1. M3 out-of-fold PR-AUC: why pooled (0.9808) > every fold
+==============================================================================
+fold 0: ROC 0.83841  AP 0.97357
+fold 1: ROC 0.83908  AP 0.97378
+fold 2: ROC 0.83621  AP 0.97298
+fold 3: ROC 0.84251  AP 0.97268
+fold 4: ROC 0.84590  AP 0.97435
+pooled raw:          AP 0.98080
+pooled, ties merged: AP 0.97367  <- use this (or report mean of folds)
+
+==============================================================================
+2. OOF (fusion training inputs) vs deployment (val/test inputs) CNN scores
+==============================================================================
+genuine                   OOF [0.001 0.003 0.015 0.062 0.245]  VAL [0.001 0.004 0.017 0.086 0.26 ]  TEST [0.    0.003 0.011 0.071 0.253]
+visual_splice             OOF [0.316 0.99  0.999 1.    1.   ]  VAL [0.705 0.999 1.    1.    1.   ]  TEST [0.908 0.999 1.    1.    1.   ]
+coordinated_full_forgery  OOF [0.001 0.004 0.013 0.06  0.279]  VAL [0.001 0.003 0.017 0.084 0.22 ]  TEST [0.    0.002 0.019 0.116 0.38 ]
+
+==============================================================================
+3. Headline test results
+==============================================================================
+OOF fusion  : TN 132 FP 18 FN 171 TP 1329 | rec 0.8860 spec 0.8800 prec 0.9866 F1 0.9336 | AUC 0.93884
+Naive fusion: TN 131 FP 19 FN 158 TP 1342 | rec 0.8947 spec 0.8733 prec 0.9860 F1 0.9381 | AUC 0.93921
+M3          : TN 137 FP 13 FN 421 TP 1079 | rec 0.7193 spec 0.9133 prec 0.9881 F1 0.8326
+
+==============================================================================
+4. Ablation: McNemar OOF fusion vs naive fusion (paired, test)
+==============================================================================
+table [[both right, only OOF right],[only naive right, both wrong]] = [[np.int64(1460), np.int64(1)], [np.int64(13), np.int64(176)]]
+exact McNemar p = 0.0018
+documents with different decisions: 14 {'text_qr_mismatch': 4, 'field_missing': 4, 'coordinated_full_forgery': 3, 'qr_only_mismatch': 1, 'visual_splice': 1, 'genuine': 1}
+Spearman correlation of the two fusion scores: 0.9993
+
+==============================================================================
+5. Coordinated full forgery vs genuine (is it above chance?)
+==============================================================================
+fusion_probability   flagged coord 21/150 vs genuine 18/150 | Fisher p=0.732 | AUC coord-vs-genuine 0.527
+m3_probability       flagged coord 14/150 vs genuine 13/150 | Fisher p=1.000 | AUC coord-vs-genuine 0.503
+cnn_probability      flagged coord 11/150 vs genuine 7/150 | Fisher p=0.467 | AUC coord-vs-genuine 0.527
+
+==============================================================================
+6. Read failures (QR unreadable / OCR failed) drive M3 false positives
+==============================================================================
+QR unreadable rate: train 0.054  val 0.066  test 0.063
+QR-unreadable docs flagged by M3 (test): 104/104
+M3 false positives on genuine: 13, of which read failures: 11
+M3 score for QR-unreadable docs: {0.4034: 72, 0.9732: 12, 0.9832: 9, 0.9895: 8, 0.8163: 1, 0.8889: 1, 0.9332: 1}
+
+==============================================================================
+7. M3 Random Forest @0.25 == a 5-line rule
+==============================================================================
+agreement test 1.0000  val 1.0000  train-OOF 0.9991
+
+==============================================================================
+8. Why fusion loses structural recall (needs pM3 >= ~0.45 when pCNN ~ 0)
+==============================================================================
+min pM3 to flag at pCNN=0: 0.451
+pM3 values of missed structural forgeries: {0.4034: 18, 0.4387: 5}
+
+==============================================================================
+9. Simple fusion baselines (threshold: max F1 s.t. val spec >= 0.90)
+==============================================================================
+logistic regression (paper)  AUC 0.9388 | TN 132 FP 18 FN 171 TP 1329 | rec 0.8860 spec 0.8800 prec 0.9866 F1 0.9336
+max(pCNN, pM3)               AUC 0.9409 | th 0.410 | TN 134 FP 16 FN 172 TP 1328 | rec 0.8853 spec 0.8933 prec 0.9881 F1 0.9339
+noisy-OR                     AUC 0.9423 | th 0.520 | TN 132 FP 18 FN 174 TP 1326 | rec 0.8840 spec 0.8800 prec 0.9866 F1 0.9325
+mean                         AUC 0.9307 | th 0.300 | TN 132 FP 18 FN 176 TP 1324 | rec 0.8827 spec 0.8800 prec 0.9866 F1 0.9317
+
+==============================================================================
+10. Realistic prevalence and genuine-as-positive PR-AUC
+==============================================================================
+forgery prevalence 1%: fusion precision 0.069
+forgery prevalence 5%: fusion precision 0.280
+forgery prevalence 10%: fusion precision 0.451
+fusion AP forged+ 0.9937 (chance 0.909) | AP genuine+ 0.4885 (chance 0.091)
+M3     AP forged+ 0.9737 (chance 0.909) | AP genuine+ 0.2438 (chance 0.091)
+CNN    AP forged+ 0.9482 (chance 0.909) | AP genuine+ 0.1037 (chance 0.091)
+
+==============================================================================
+11. Brier: raw M3 is worse than a constant predictor
+==============================================================================
+M3 raw 0.17132 | M3 calibrated 0.06978 | fusion 0.05215 | constant base rate 0.08264

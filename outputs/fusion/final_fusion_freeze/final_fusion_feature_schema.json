@@ -1,0 +1,25 @@
+{
+  "fusion_features": [
+    "cnn_probability",
+    "m3_probability"
+  ],
+  "feature_count": 2,
+  "target_column": "target",
+  "forbidden_features_verified_absent": [
+    "id",
+    "record_id",
+    "document_family",
+    "tamper_type",
+    "final_label",
+    "target",
+    "image_path",
+    "label_path",
+    "cnn_label",
+    "ground_truth_fields",
+    "expected_consistency_vector",
+    "splice_metadata",
+    "fine_grained_metadata",
+    "generator_metadata",
+    "oof_fold"
+  ]
+}

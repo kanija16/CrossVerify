@@ -1,0 +1,32 @@
+{
+  "status": "REDUNDANT_TRANSFORMATION_OF_EXISTING_FEATURES",
+  "slot_mappings": {
+    "family_a": [
+      "name",
+      "dob",
+      "gender",
+      "id_number",
+      "address"
+    ],
+    "family_b": [
+      "full_name",
+      "registry_id",
+      "entity_type",
+      "jurisdiction_code",
+      "registration_date"
+    ]
+  },
+  "semantic_role_features": {
+    "sem_name_sim": "Maps directly to field_similarity__0 (Name in Family A, Full Name in Family B)",
+    "sem_identifier_sim": "Maps to field_similarity__3 (id_number) in Fam A, and field_similarity__1 (registry_id) in Fam B",
+    "sem_date_sim": "Maps to field_similarity__1 (dob) in Fam A, and field_similarity__4 (registration_date) in Fam B"
+  },
+  "aggregate_features": [
+    "sem_min_field_sim",
+    "sem_max_field_sim",
+    "sem_mean_field_sim",
+    "sem_num_exact_matches",
+    "sem_num_severe_mismatches"
+  ],
+  "finding": "Semantic features are deterministic re-indexings and aggregations of the existing 5 field similarity slots. Trees in A0 already learn these non-linear splits natively, yielding zero ranking gain (0.9729 vs 0.9729)."
+}

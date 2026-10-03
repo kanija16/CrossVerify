@@ -1,0 +1,6 @@
+{
+  "forbidden_feature_leakage": "PASS",
+  "identity_overlap_leakage": "PASS (0 overlapping record_ids)",
+  "test_set_lock_status": "PASS (Zero access to test.csv or test_features.csv)",
+  "negative_control_family_only": "PASS (Exact 0.5000 ROC-AUC)"
+}

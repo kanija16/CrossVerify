@@ -1,0 +1,79 @@
+{
+  "timestamp_utc": "2026-09-19T07:58:34.991848+00:00",
+  "overall_status": "PASS",
+  "checks": {
+    "check_a_test_row_count": {
+      "status": "PASS",
+      "count": 1650
+    },
+    "check_b_unique_record_ids": {
+      "status": "PASS",
+      "count": 150
+    },
+    "check_c_rows_per_record": {
+      "status": "PASS",
+      "rows_per_record": 11
+    },
+    "check_d_no_duplicate_ids": {
+      "status": "PASS",
+      "unique_ids": 1650
+    },
+    "check_e_cnn_alignment": {
+      "status": "PASS"
+    },
+    "check_f_m3_alignment": {
+      "status": "PASS"
+    },
+    "check_g_zero_null_cnn": {
+      "status": "PASS",
+      "null_count": 0
+    },
+    "check_h_zero_null_m3": {
+      "status": "PASS",
+      "null_count": 0
+    },
+    "check_i_probability_ranges": {
+      "status": "PASS"
+    },
+    "check_j_fusion_model_hash": {
+      "status": "PASS",
+      "sha256": "73931e2fa90b84f83b8d61348aeed9729a802bf52c0e80704f62f5f13a5281e2"
+    },
+    "check_k_m3_model_hash": {
+      "status": "PASS",
+      "sha256": "a0d3dd8a4c544ecd307e0926addda7b0b4d3a187138c13307cd582d6500d55f3"
+    },
+    "check_l_threshold_exact": {
+      "status": "PASS",
+      "threshold": 0.82
+    },
+    "check_m_no_fit_calls": {
+      "status": "PASS"
+    },
+    "check_n_no_threshold_search": {
+      "status": "PASS"
+    },
+    "check_o_historical_artifacts_preserved": {
+      "status": "PASS"
+    },
+    "check_p_train_test_disjointness": {
+      "status": "PASS",
+      "overlap": 0
+    },
+    "check_q_val_test_disjointness": {
+      "status": "PASS",
+      "overlap": 0
+    },
+    "check_r_prediction_count": {
+      "status": "PASS",
+      "count": 1650
+    }
+  },
+  "generated_artifact_hashes": {
+    "corrected_fusion_test_predictions_csv": "b1cbf57377c0772731bf74f224ae4d24e12a9f1c2998bc8f7f1e0c7acb44fda0",
+    "corrected_fusion_test_metrics_json": "42e3f10e08eb0f6ae2b50c2a28fa1414e50ed2fb5ceae126cb16e2283a131d6f",
+    "corrected_fusion_test_attack_wise_csv": "ac001a46d16ba6144f31df63954501e7779c24aaa300a10d3813929cd02e67d7",
+    "corrected_fusion_test_family_wise_csv": "9e434bbc0fb478963232d5a0664f535b1098003c9949ae0a73d033749a5707c9",
+    "cnn_probability_test_csv": "4d9ffd151fa9de92715b301466e767970a4cfd0bf00ef22421d55438946ca1a3"
+  }
+}

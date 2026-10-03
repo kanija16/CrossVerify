@@ -1,0 +1,11 @@
+# Cross-modal branch (src/m3_crossmodal/). Python 3.13.5. Versions as reported in the paper.
+scikit-learn==1.6.1
+numpy==2.2.3
+pandas==2.2.3
+joblib
+# Live OCR / QR extraction (versions not recorded; features are released in outputs/features/)
+pytesseract
+opencv-python
+scipy
+matplotlib
+# System package: Tesseract OCR

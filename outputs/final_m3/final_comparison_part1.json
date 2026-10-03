@@ -1,0 +1,37 @@
+{
+  "historical_part1_baseline": {
+    "description": "HISTORICAL PART 1 BASELINE (Precomputed Consistency Heuristics, No Live OCR/QR)",
+    "test_roc_auc": 0.7683,
+    "test_accuracy": 0.5758,
+    "test_precision": 0.9535,
+    "test_recall": 0.5607,
+    "test_f1": 0.7061
+  },
+  "live_5_feature_baseline": {
+    "description": "LIVE 5-FEATURE BASELINE (Live OCR + Live QR, 5 Consistency Features Logistic Regression)",
+    "test_roc_auc": 0.8293,
+    "test_pr_auc": 0.9685,
+    "test_accuracy": 0.7303,
+    "test_precision": 0.988,
+    "test_recall": 0.712,
+    "test_f1": 0.8271
+  },
+  "final_frozen_m3_model": {
+    "description": "FINAL FROZEN M3 MODEL (15 Tabular Features, Calibrated Random Forest, tau=0.25)",
+    "test_roc_auc": 0.8436,
+    "test_pr_auc": 0.9737,
+    "test_accuracy": 0.737,
+    "test_precision": 0.9881,
+    "test_recall": 0.7193,
+    "test_f1": 0.8326,
+    "test_specificity": 0.9133,
+    "test_brier_score": 0.0698
+  },
+  "improvements_vs_historical_part1": {
+    "delta_roc_auc": 0.0753,
+    "delta_accuracy": 0.1612,
+    "delta_f1": 0.1265,
+    "delta_recall": 0.1586,
+    "delta_precision": 0.0346
+  }
+}

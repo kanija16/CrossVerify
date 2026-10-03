@@ -1,0 +1,67 @@
+{
+  "split": "test",
+  "total_samples": 1650,
+  "genuine_samples": 150,
+  "forged_samples": 1500,
+  "frozen_threshold": 0.78,
+  "pr_auc": 0.9938,
+  "roc_auc": 0.93921,
+  "brier_score": 0.05168,
+  "accuracy": 0.8927,
+  "precision": 0.986,
+  "recall": 0.8947,
+  "f1": 0.9381,
+  "specificity": 0.8733,
+  "fpr": 0.1267,
+  "confusion_matrix": {
+    "tn": 131,
+    "fp": 19,
+    "fn": 158,
+    "tp": 1342,
+    "matrix_2x2": [
+      [
+        131,
+        19
+      ],
+      [
+        158,
+        1342
+      ]
+    ]
+  },
+  "model_coefficients": [
+    [
+      3.470975847501685,
+      7.209759054944582
+    ]
+  ],
+  "model_intercept": [
+    -1.8087318980585172
+  ],
+  "probability_distribution_summary": {
+    "min": 0.484838,
+    "q25": 0.967949,
+    "median": 0.994769,
+    "q75": 0.995618,
+    "max": 0.999859,
+    "mean": 0.90625,
+    "std": 0.1742
+  },
+  "forged_detected_count": 1342,
+  "forged_missed_count": 158,
+  "forged_detected_fraction": "1342/1500",
+  "reference_1450_target": {
+    "aspirational_target": "1450/1500 (96.67%)",
+    "measured_detected": "1342/1500 (89.47%)",
+    "gap_to_target": 108,
+    "note": "1450/1500 is an aspirational reference point, not a success criterion for changing the model."
+  },
+  "reproducibility": {
+    "m2_sha256": "93641580863cc8b7ce4a11144157c1dfd42ab416aa7a4132e26fa0dda3711bf6",
+    "m3_sha256": "a0d3dd8a4c544ecd307e0926addda7b0b4d3a187138c13307cd582d6500d55f3",
+    "fusion_sha256": "4e8391922ec267865abecb2348c256ed6f6c981986876772bfa6f17ab81110d2",
+    "bootstrap_seed": 42,
+    "bootstrap_count": 1000,
+    "test_sample_count": 1650
+  }
+}

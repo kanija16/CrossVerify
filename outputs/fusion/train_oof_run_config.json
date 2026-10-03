@@ -1,0 +1,32 @@
+{
+  "dataset_split": "train",
+  "total_samples": 7700,
+  "total_identities": 700,
+  "variants_per_identity": 11,
+  "genuine_samples": 700,
+  "forged_samples": 7000,
+  "cv_strategy": "GroupKFold(n_splits=5, groups=record_id)",
+  "unique_identities_per_fold": {
+    "0": 140,
+    "1": 140,
+    "2": 140,
+    "3": 140,
+    "4": 140
+  },
+  "samples_per_fold": {
+    "0": 1540,
+    "3": 1540,
+    "4": 1540,
+    "1": 1540,
+    "2": 1540
+  },
+  "m2_inference_model": "ResNet18 (models/cnn/best_model.pt)",
+  "m2_score_semantics": "P(cnn_label = forged) = P(visual_splice)",
+  "m3_inference_models": [
+    "outputs/final_m3_model_freeze/final_m3_model.joblib",
+    "outputs/final_m3_model_freeze/final_m3_calibrated_model.joblib"
+  ],
+  "m3_calibration_provenance": "CalibratedClassifierCV(method='sigmoid', cv=5) trained strictly on canonical train split during Phase 3 freeze",
+  "test_set_access_status": "STRICTLY LOCKED \u2014 ZERO TEST ACCESS",
+  "validation_set_status": "UNTOUCHED \u2014 val_alignment.csv preserved exactly"
+}

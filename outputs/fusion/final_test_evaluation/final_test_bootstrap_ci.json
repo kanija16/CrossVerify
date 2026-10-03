@@ -1,0 +1,38 @@
+{
+  "pr_auc": {
+    "point_estimate": 0.9938,
+    "bootstrap_mean": 0.9938,
+    "ci_95_lower": 0.9919,
+    "ci_95_upper": 0.9955
+  },
+  "roc_auc": {
+    "point_estimate": 0.93921,
+    "bootstrap_mean": 0.9395,
+    "ci_95_lower": 0.9262,
+    "ci_95_upper": 0.9518
+  },
+  "accuracy": {
+    "point_estimate": 0.8927,
+    "bootstrap_mean": 0.8929,
+    "ci_95_lower": 0.8788,
+    "ci_95_upper": 0.9061
+  },
+  "precision": {
+    "point_estimate": 0.986,
+    "bootstrap_mean": 0.9861,
+    "ci_95_lower": 0.9796,
+    "ci_95_upper": 0.992
+  },
+  "recall": {
+    "point_estimate": 0.8947,
+    "bootstrap_mean": 0.8948,
+    "ci_95_lower": 0.8794,
+    "ci_95_upper": 0.9088
+  },
+  "f1": {
+    "point_estimate": 0.9381,
+    "bootstrap_mean": 0.9382,
+    "ci_95_lower": 0.9297,
+    "ci_95_upper": 0.9465
+  }
+}

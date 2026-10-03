@@ -1,0 +1,15 @@
+# Fusion meta-learner, evaluation and revision analyses
+# (src/m3_crossmodal/fusion/, src/evaluation/, src/analysis/). Python 3.12.10.
+scikit-learn==1.9.1
+numpy
+pandas
+joblib
+scipy
+statsmodels
+matplotlib   # paper figures (src/analysis/make_figures.py, make_example_figure.py)
+# Only for src/analysis/qr_decoder_comparison.py (+ system zbar library):
+opencv-python
+pyzbar
+pillow
+# Note: the frozen M3 model (outputs/final_m3_model_freeze/*.joblib) was saved with
+# scikit-learn 1.6.1; it loads under 1.9.x with an InconsistentVersionWarning.

@@ -1,0 +1,21 @@
+{
+  "split": "test",
+  "samples": 1650,
+  "threshold": 0.25,
+  "pr_auc": 0.9737,
+  "roc_auc": 0.8436,
+  "accuracy": 0.737,
+  "precision": 0.9881,
+  "recall": 0.7193,
+  "f1": 0.8326,
+  "specificity": 0.9133,
+  "fpr": 0.0867,
+  "brier_score_uncalibrated": 0.1713,
+  "brier_score_calibrated": 0.0698,
+  "confusion_matrix": {
+    "tn": 137,
+    "fp": 13,
+    "fn": 421,
+    "tp": 1079
+  }
+}

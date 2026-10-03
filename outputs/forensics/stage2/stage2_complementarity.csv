@@ -1,0 +1,10 @@
+tamper_type,N,m2_correct,m3_correct,forensic_correct,b0_2way_correct,b1_3way_correct,m3_wrong_and_forensic_right
+genuine,150,143,134,0,135,137,0
+text_qr_mismatch,150,16,150,150,140,146,0
+qr_only_mismatch,150,11,150,150,144,144,0
+checksum_invalid,150,5,150,150,150,149,0
+format_invalid,150,4,150,150,150,149,0
+field_missing,150,2,150,150,150,149,0
+visual_splice,450,409,155,450,423,362,295
+fine_grained_edit,150,10,147,150,140,143,3
+coordinated_full_forgery,150,7,14,150,19,15,136

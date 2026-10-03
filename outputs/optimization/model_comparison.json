@@ -1,0 +1,29 @@
+{
+  "random_forest": {
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8357,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "val_brier_score": 0.177,
+    "threshold": 0.25
+  },
+  "hist_gradient_boosting": {
+    "val_pr_auc": 0.9726,
+    "val_roc_auc": 0.8336,
+    "val_f1": 0.8245,
+    "val_precision": 0.987,
+    "val_recall": 0.708,
+    "val_brier_score": 0.1809,
+    "threshold": 0.33
+  },
+  "logistic_regression": {
+    "val_pr_auc": 0.9697,
+    "val_roc_auc": 0.825,
+    "val_f1": 0.8239,
+    "val_precision": 0.9852,
+    "val_recall": 0.708,
+    "val_brier_score": 0.1862,
+    "threshold": 0.29
+  }
+}

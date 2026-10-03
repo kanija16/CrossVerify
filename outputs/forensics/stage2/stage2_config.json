@@ -1,0 +1,16 @@
+{
+  "status": "VALIDATION_COMPLETE",
+  "test_set_access": "ZERO TEST ACCESS (Strictly Locked)",
+  "train_data": "canonical train.csv (N=7,700, 700 identities)",
+  "val_data": "canonical val.csv (N=1,650, 150 identities)",
+  "training_data_limitation_note": "frozen-upstream training predictions with grouped fold annotations",
+  "candidates": [
+    "B0_2Way_Baseline",
+    "B1_3Way_RF",
+    "B2_3Way_HGB",
+    "B3_2Way_A2_RF",
+    "B4_2Way_A2_HGB"
+  ],
+  "primary_candidate": "B1_3Way_RF",
+  "threshold_selection_rule": "maximize F1 subject to specificity >= 0.90 on validation"
+}

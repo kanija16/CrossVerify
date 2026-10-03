@@ -1,0 +1,82 @@
+{
+  "timestamp_utc": "2026-09-19T07:23:50.557177+00:00",
+  "phase": "Phase 1B-B Corrected Fusion Training + Validation Threshold Selection",
+  "model_architecture": "LogisticRegression",
+  "feature_order": [
+    "cnn_probability_oof",
+    "m3_probability_oof"
+  ],
+  "target_column": "final_label",
+  "hyperparameters": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "random_state": 42
+  },
+  "learned_parameters": {
+    "cnn_probability_oof_weight": 3.536043325697256,
+    "m3_probability_oof_weight": 6.6159925584417145,
+    "intercept": -1.4693148085333863
+  },
+  "sklearn_version": "1.9.1",
+  "training_data_provenance": {
+    "source_type": "Genuine 5-fold GroupKFold OOF predictions (100% held-out)",
+    "aligned_oof_artifact": "outputs/fusion/oof/corrected_fusion_oof.csv",
+    "aligned_oof_sha256": "c1ba7ac57fc0e0318234b554510bcac8d17bd36543e0b92b07905b6de3c11d7b",
+    "cnn_oof_source": "outputs/fusion/oof/cnn_oof_predictions.csv",
+    "cnn_oof_sha256": "d602c271009bff4dedf19c8c4009a66ea225d4c02ef371f9d438bf8a97cbc415",
+    "m3_oof_source": "outputs/fusion/oof/train_oof_predictions.csv",
+    "m3_oof_sha256": "6cee59da0633bf90773cbf49719a8293a51fb6e1a3f73b99b2f8ecc7ebcc2673",
+    "canonical_train_split": "data/splits/train.csv",
+    "canonical_train_sha256": "12177bb673263f8de2913544aaffe38260446ae016a75acf6788130eb3403eae",
+    "total_training_rows": 7700,
+    "total_training_record_ids": 700
+  },
+  "oof_training_diagnostics": {
+    "status": "OOF fusion training diagnostics ONLY (NOT a generalization estimate)",
+    "sample_count": 7700,
+    "roc_auc": 0.928279,
+    "pr_auc": 0.99245,
+    "threshold_0_5": {
+      "f1": 0.952238,
+      "precision": 0.909067,
+      "recall": 0.999714,
+      "specificity": 0.0,
+      "accuracy": 0.908831,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 700,
+        "fn": 2,
+        "tp": 6998
+      }
+    }
+  },
+  "validation_threshold_selection": {
+    "canonical_val_split": "data/splits/val.csv",
+    "canonical_val_sha256": "e2117afadc6d7f62a74845f1a03ef250a06531fd4e3a47da12a75c3f1289d52f",
+    "val_upstream_predictions_artifact": "outputs/fusion/val_upstream_predictions.csv",
+    "val_upstream_predictions_sha256": "954a5b56ebf6e1afdefd2483d2fbcec8a78320f0ef99b23f15f0832823b43253",
+    "threshold_selection_protocol": "Grid search 0.01 to 0.99 step 0.01; Maximize F1 subject to Specificity >= 0.90",
+    "candidate_thresholds_satisfying_constraint": 18,
+    "selected_threshold": 0.82,
+    "metrics_at_selected_threshold": {
+      "threshold": 0.82,
+      "f1": 0.927382,
+      "precision": 0.989418,
+      "recall": 0.872667,
+      "specificity": 0.906667,
+      "accuracy": 0.875758,
+      "confusion_matrix": {
+        "tn": 136,
+        "fp": 14,
+        "fn": 191,
+        "tp": 1309
+      }
+    }
+  },
+  "test_set_access_status": "STRICTLY UNACCESSED \u2014 Zero test rows loaded, fitted, or evaluated",
+  "historical_artifacts_preserved": {
+    "train_oof_alignment_csv": "outputs/fusion/train_oof_alignment.csv",
+    "historical_fusion_model_joblib": "outputs/fusion/final_fusion_freeze/final_fusion_model.joblib",
+    "historical_fusion_config_json": "outputs/fusion/final_fusion_freeze/final_fusion_config.json"
+  }
+}

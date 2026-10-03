@@ -1,0 +1,36 @@
+{
+  "model_name": "M3_Canonical_Random_Forest",
+  "estimator": "RandomForestClassifier",
+  "calibration": "CalibratedClassifierCV(method='sigmoid', cv=5)",
+  "feature_count": 15,
+  "features": [
+    "qr_readable",
+    "text_qr_match_score",
+    "checksum_valid",
+    "format_valid",
+    "missing_field_count",
+    "ocr_field_presence_count",
+    "ocr_field_presence_rate",
+    "qr_field_count",
+    "ocr_qr_key_overlap_count",
+    "field_similarity__0",
+    "field_similarity__1",
+    "field_similarity__2",
+    "field_similarity__3",
+    "field_similarity__4",
+    "checksum_computed"
+  ],
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 8,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "imputation": "SimpleImputer(strategy='median', add_indicator=True)",
+  "domain_handling": "Common pooled classifier across document families (A0)",
+  "freeze_timestamp": "2026-09-14T08:13:32.001085+00:00",
+  "model_status": "FROZEN"
+}

@@ -1,0 +1,11 @@
+{
+  "uncalibrated_brier": 0.1757,
+  "calibrated_brier": 0.0707,
+  "brier_reduction_pct": 59.76,
+  "uncalibrated_pr_auc": 0.9781,
+  "calibrated_pr_auc": 0.9781,
+  "uncalibrated_roc_auc": 0.8444,
+  "calibrated_roc_auc": 0.8445,
+  "method": "5-fold Sigmoid (Platt) on TRAIN only",
+  "finding": "Calibration drastically improves posterior probability reliability for downstream fusion without degrading threshold-free ranking."
+}

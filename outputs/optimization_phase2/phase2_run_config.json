@@ -1,0 +1,13 @@
+{
+  "train_samples": 7700,
+  "val_samples": 1650,
+  "test_samples_locked": 1650,
+  "test_set_status": "STRICTLY LOCKED \u2014 ZERO ACCESS OR EVALUATION",
+  "random_seed": 42,
+  "models_evaluated": [
+    "RandomForestClassifier",
+    "HistGradientBoostingClassifier",
+    "SeparateFamilyRF",
+    "ProbabilityEnsemble"
+  ]
+}

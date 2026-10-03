@@ -1,0 +1,7 @@
+{
+  "trials": 5,
+  "null_mean_roc_auc": 0.5426,
+  "null_mean_pr_auc": 0.9225,
+  "base_rate_pr_auc": 0.9091,
+  "status": "PASS \u2014 Performance collapses to random baseline under label permutation"
+}

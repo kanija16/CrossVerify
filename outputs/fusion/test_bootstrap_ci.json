@@ -1,0 +1,105 @@
+{
+  "protocol": "1000 document-level resamples, RandomState(42), percentile 95% CI",
+  "cnn": {
+    "target": "cnn_label",
+    "threshold": 0.5,
+    "roc_auc": {
+      "point_estimate": 0.98175,
+      "ci_95_lower": 0.9728,
+      "ci_95_upper": 0.989
+    },
+    "pr_auc": {
+      "point_estimate": 0.97231,
+      "ci_95_lower": 0.9611,
+      "ci_95_upper": 0.9817
+    },
+    "accuracy": {
+      "point_estimate": 0.94667,
+      "ci_95_lower": 0.9352,
+      "ci_95_upper": 0.9576
+    },
+    "precision": {
+      "point_estimate": 0.88025,
+      "ci_95_lower": 0.8502,
+      "ci_95_upper": 0.9077
+    },
+    "recall": {
+      "point_estimate": 0.93111,
+      "ci_95_lower": 0.9055,
+      "ci_95_upper": 0.9543
+    },
+    "f1": {
+      "point_estimate": 0.90497,
+      "ci_95_lower": 0.8837,
+      "ci_95_upper": 0.9243
+    }
+  },
+  "m3": {
+    "target": "final_label",
+    "threshold": 0.25,
+    "roc_auc": {
+      "point_estimate": 0.84356,
+      "ci_95_lower": 0.8291,
+      "ci_95_upper": 0.858
+    },
+    "pr_auc": {
+      "point_estimate": 0.97371,
+      "ci_95_lower": 0.9688,
+      "ci_95_upper": 0.978
+    },
+    "accuracy": {
+      "point_estimate": 0.73697,
+      "ci_95_lower": 0.717,
+      "ci_95_upper": 0.757
+    },
+    "precision": {
+      "point_estimate": 0.9881,
+      "ci_95_lower": 0.9811,
+      "ci_95_upper": 0.9944
+    },
+    "recall": {
+      "point_estimate": 0.71933,
+      "ci_95_lower": 0.698,
+      "ci_95_upper": 0.7407
+    },
+    "f1": {
+      "point_estimate": 0.83256,
+      "ci_95_lower": 0.8179,
+      "ci_95_upper": 0.8471
+    }
+  },
+  "fusion": {
+    "target": "final_label",
+    "threshold": 0.82,
+    "roc_auc": {
+      "point_estimate": 0.93884,
+      "ci_95_lower": 0.9257,
+      "ci_95_upper": 0.9516
+    },
+    "pr_auc": {
+      "point_estimate": 0.99375,
+      "ci_95_lower": 0.9918,
+      "ci_95_upper": 0.9954
+    },
+    "accuracy": {
+      "point_estimate": 0.88545,
+      "ci_95_lower": 0.8715,
+      "ci_95_upper": 0.8994
+    },
+    "precision": {
+      "point_estimate": 0.98664,
+      "ci_95_lower": 0.9803,
+      "ci_95_upper": 0.9926
+    },
+    "recall": {
+      "point_estimate": 0.886,
+      "ci_95_lower": 0.87,
+      "ci_95_upper": 0.9013
+    },
+    "f1": {
+      "point_estimate": 0.93361,
+      "ci_95_lower": 0.9245,
+      "ci_95_upper": 0.9421
+    }
+  }
+}

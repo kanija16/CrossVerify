@@ -1,0 +1,77 @@
+[
+  {
+    "feature": "text_qr_match_score",
+    "importance_mean": 0.18819,
+    "importance_std": 0.01815
+  },
+  {
+    "feature": "field_similarity__1",
+    "importance_mean": 0.0031,
+    "importance_std": 0.00492
+  },
+  {
+    "feature": "checksum_valid",
+    "importance_mean": 0.00285,
+    "importance_std": 0.00328
+  },
+  {
+    "feature": "format_valid",
+    "importance_mean": 0.00281,
+    "importance_std": 0.00631
+  },
+  {
+    "feature": "field_similarity__3",
+    "importance_mean": 0.00185,
+    "importance_std": 0.00698
+  },
+  {
+    "feature": "missing_field_count",
+    "importance_mean": 0.00163,
+    "importance_std": 0.00511
+  },
+  {
+    "feature": "field_similarity__2",
+    "importance_mean": 0.00138,
+    "importance_std": 0.00423
+  },
+  {
+    "feature": "field_similarity__4",
+    "importance_mean": 0.00135,
+    "importance_std": 0.00517
+  },
+  {
+    "feature": "checksum_computed",
+    "importance_mean": 0.00023,
+    "importance_std": 2e-05
+  },
+  {
+    "feature": "ocr_field_presence_count",
+    "importance_mean": -0.0003,
+    "importance_std": 0.00407
+  },
+  {
+    "feature": "field_similarity__0",
+    "importance_mean": -0.00037,
+    "importance_std": 0.00489
+  },
+  {
+    "feature": "ocr_field_presence_rate",
+    "importance_mean": -0.00049,
+    "importance_std": 0.00408
+  },
+  {
+    "feature": "ocr_qr_key_overlap_count",
+    "importance_mean": -0.00055,
+    "importance_std": 0.00431
+  },
+  {
+    "feature": "qr_readable",
+    "importance_mean": -0.00061,
+    "importance_std": 0.00366
+  },
+  {
+    "feature": "qr_field_count",
+    "importance_mean": -0.00071,
+    "importance_std": 0.00363
+  }
+]

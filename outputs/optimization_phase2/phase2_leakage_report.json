@@ -1,0 +1,7 @@
+{
+  "forbidden_feature_leakage": "ZERO. Verified via assert_no_forbidden_features on all candidate matrices.",
+  "identity_overlap": "ZERO. Train identities (700) and Val identities (150) are 100% disjoint.",
+  "test_set_containment": "CONFIRMED. No test set records were read, scored, or evaluated.",
+  "family_leakage_audit": "Negative control confirms document_family alone yields ROC-AUC = 0.5000 (pure chance).",
+  "null_permutation_audit": "Collapses to ROC-AUC = 0.5426 and PR-AUC = 0.9225 (chance)."
+}

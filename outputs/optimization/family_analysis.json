@@ -1,0 +1,17 @@
+{
+  "negative_control_family_only": {
+    "val_roc_auc": 0.5,
+    "val_pr_auc": 0.9091,
+    "expected_roc_auc": 0.5,
+    "status": "PASS \u2014 document_family alone is exact random chance"
+  },
+  "model_with_family_conditioning": {
+    "val_roc_auc": 0.8444,
+    "val_pr_auc": 0.9781,
+    "val_f1": 0.9072,
+    "threshold": 0.22,
+    "delta_pr_auc_vs_agnostic": 0.0052,
+    "delta_roc_auc_vs_agnostic": 0.0086,
+    "scientific_rationale": "Conditioning on family allows tree splits to bifurcate between Family A (12-digit Luhn) and Family B (10-digit Mod-11) thresholds without label leakage."
+  }
+}

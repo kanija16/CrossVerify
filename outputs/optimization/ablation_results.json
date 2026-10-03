@@ -1,0 +1,266 @@
+{
+  "A0": {
+    "num_features": 15,
+    "features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed"
+    ],
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8357,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "threshold": 0.25,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "B1": {
+    "num_features": 19,
+    "features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed",
+      "text_qr_match_score_missing",
+      "qr_unreadable",
+      "checksum_uncomputed",
+      "has_any_missing_field"
+    ],
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8354,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "threshold": 0.25,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "B2": {
+    "num_features": 20,
+    "features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed",
+      "text_qr_match_score_missing",
+      "qr_unreadable",
+      "checksum_uncomputed",
+      "has_any_missing_field",
+      "field_sim_available_count"
+    ],
+    "val_pr_auc": 0.9728,
+    "val_roc_auc": 0.8351,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "threshold": 0.25,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "B3": {
+    "num_features": 25,
+    "features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed",
+      "text_qr_match_score_missing",
+      "qr_unreadable",
+      "checksum_uncomputed",
+      "has_any_missing_field",
+      "field_sim_available_count",
+      "field_sim_sq__0",
+      "field_sim_sq__1",
+      "field_sim_sq__2",
+      "field_sim_sq__3",
+      "field_sim_sq__4"
+    ],
+    "val_pr_auc": 0.9728,
+    "val_roc_auc": 0.8349,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "threshold": 0.25,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "B4": {
+    "num_features": 28,
+    "features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed",
+      "text_qr_match_score_missing",
+      "qr_unreadable",
+      "checksum_uncomputed",
+      "has_any_missing_field",
+      "field_sim_available_count",
+      "field_sim_sq__0",
+      "field_sim_sq__1",
+      "field_sim_sq__2",
+      "field_sim_sq__3",
+      "field_sim_sq__4",
+      "worst_field_sim",
+      "best_field_sim",
+      "mean_field_sim"
+    ],
+    "val_pr_auc": 0.9728,
+    "val_roc_auc": 0.8352,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "threshold": 0.24,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  },
+  "B5": {
+    "num_features": 31,
+    "features": [
+      "qr_readable",
+      "text_qr_match_score",
+      "checksum_valid",
+      "format_valid",
+      "missing_field_count",
+      "ocr_field_presence_count",
+      "ocr_field_presence_rate",
+      "qr_field_count",
+      "ocr_qr_key_overlap_count",
+      "field_similarity__0",
+      "field_similarity__1",
+      "field_similarity__2",
+      "field_similarity__3",
+      "field_similarity__4",
+      "checksum_computed",
+      "text_qr_match_score_missing",
+      "qr_unreadable",
+      "checksum_uncomputed",
+      "has_any_missing_field",
+      "field_sim_available_count",
+      "field_sim_sq__0",
+      "field_sim_sq__1",
+      "field_sim_sq__2",
+      "field_sim_sq__3",
+      "field_sim_sq__4",
+      "worst_field_sim",
+      "best_field_sim",
+      "mean_field_sim",
+      "id_valid_both",
+      "id_checksum_without_format",
+      "id_format_without_checksum"
+    ],
+    "val_pr_auc": 0.9729,
+    "val_roc_auc": 0.8355,
+    "val_f1": 0.8257,
+    "val_precision": 0.9852,
+    "val_recall": 0.7107,
+    "threshold": 0.24,
+    "confusion_matrix": [
+      [
+        134,
+        16
+      ],
+      [
+        434,
+        1066
+      ]
+    ]
+  }
+}

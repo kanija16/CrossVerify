@@ -1,0 +1,114 @@
+{
+  "stacker_architecture": "LogisticRegression(cnn_probability, m3_calibrated_probability)",
+  "cv_method": "GroupKFold(n_splits=5, groups=record_id)",
+  "training_data_source": "outputs/fusion/val_alignment.csv (1650 samples)",
+  "train_level_oof_available": false,
+  "in_sample_predictions_used": false,
+  "all_predictions_strictly_oof": true,
+  "threshold_selection_data": "Selected on the same validation OOF predictions",
+  "methodological_label": "VALIDATION DEVELOPMENT RESULT (subject to threshold selection bias)",
+  "fold_audit": [
+    {
+      "fold": 0,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "cnn_coef": 2.495193679812527,
+      "m3_coef": 8.044207730732248,
+      "intercept": -5.317232019502062
+    },
+    {
+      "fold": 1,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "cnn_coef": 2.515920420603069,
+      "m3_coef": 8.060758306235488,
+      "intercept": -5.290819600895961
+    },
+    {
+      "fold": 2,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "cnn_coef": 2.5448158777017076,
+      "m3_coef": 8.117795403777643,
+      "intercept": -5.3431329643260606
+    },
+    {
+      "fold": 3,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "cnn_coef": 2.482402392195807,
+      "m3_coef": 8.228099505867021,
+      "intercept": -5.458577651397465
+    },
+    {
+      "fold": 4,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "cnn_coef": 2.5925799608276843,
+      "m3_coef": 7.952703180808606,
+      "intercept": -5.215749060433606
+    }
+  ],
+  "g_cnn_fold_audit": [
+    {
+      "fold": 0,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "train_unique_records": 120,
+      "val_unique_records": 30,
+      "fold_coef": 1.75300489583998,
+      "fold_intercept": 1.9393220468786212,
+      "pred_min": 0.8742793237872911,
+      "pred_max": 0.9756915964845302
+    },
+    {
+      "fold": 1,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "train_unique_records": 120,
+      "val_unique_records": 30,
+      "fold_coef": 1.7910661214335146,
+      "fold_intercept": 1.9502133484277897,
+      "pred_min": 0.8754721473133907,
+      "pred_max": 0.9768259654622986
+    },
+    {
+      "fold": 2,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "train_unique_records": 120,
+      "val_unique_records": 30,
+      "fold_coef": 1.848228368975691,
+      "fold_intercept": 1.9442263285669874,
+      "pred_min": 0.8748186197169545,
+      "pred_max": 0.9779566189602901
+    },
+    {
+      "fold": 3,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "train_unique_records": 120,
+      "val_unique_records": 30,
+      "fold_coef": 1.7329483467575015,
+      "fold_intercept": 1.9405990817482202,
+      "pred_min": 0.8744183492975656,
+      "pred_max": 0.9752421226834364
+    },
+    {
+      "fold": 4,
+      "train_samples": 1320,
+      "val_samples": 330,
+      "train_unique_records": 120,
+      "val_unique_records": 30,
+      "fold_coef": 1.8608422450901723,
+      "fold_intercept": 1.9449691980848007,
+      "pred_min": 0.8748977466933268,
+      "pred_max": 0.9782427586582881
+    }
+  ],
+  "overall_oof_metrics": {
+    "pr_auc": 0.98735,
+    "roc_auc": 0.9056,
+    "brier_score": 0.06113
+  }
+}

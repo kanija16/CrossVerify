@@ -1,0 +1,10 @@
+tamper_type,role,N,metric_name,metric_value,tn,fp,fn,tp,tp_over_n,fn_over_n,tn_over_n,fp_over_n
+checksum_invalid,forged_attack,150,recall,1.0,0,0,0,150,150/150,0/150,N/A,N/A
+coordinated_full_forgery,forged_attack,150,recall,0.16,0,0,126,24,24/150,126/150,N/A,N/A
+field_missing,forged_attack,150,recall,1.0,0,0,0,150,150/150,0/150,N/A,N/A
+fine_grained_edit,forged_attack,150,recall,0.9733,0,0,4,146,146/150,4/150,N/A,N/A
+format_invalid,forged_attack,150,recall,1.0,0,0,0,150,150/150,0/150,N/A,N/A
+genuine,genuine,150,specificity,0.8733,131,19,0,0,N/A,N/A,131/150,19/150
+qr_only_mismatch,forged_attack,150,recall,0.9667,0,0,5,145,145/150,5/150,N/A,N/A
+text_qr_mismatch,forged_attack,150,recall,0.9667,0,0,5,145,145/150,5/150,N/A,N/A
+visual_splice,forged_attack,450,recall,0.96,0,0,18,432,432/450,18/450,N/A,N/A

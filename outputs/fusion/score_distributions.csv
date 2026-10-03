@@ -1,0 +1,21 @@
+attack_category,n_samples,signal_name,mean,median,std,min,max,q25,q75
+Genuine,150,cnn_probability,0.0926,0.0165,0.1888,0.0001,0.9999,0.0037,0.0862
+Genuine,150,transformed_cnn_signal_g,0.8884,0.878,0.023,0.8743,0.9782,0.8755,0.8907
+Genuine,150,m3_calibrated_probability,0.772,0.7542,0.0534,0.7542,0.9914,0.7542,0.7542
+Genuine,150,fusion_probability_best_alpha,0.7778,0.7605,0.0508,0.7602,0.9895,0.7603,0.7617
+Genuine,150,stacker_probability,0.741,0.6954,0.0824,0.6787,0.9917,0.6878,0.7651
+Visual Splice,450,cnn_probability,0.909,0.9999,0.2644,0.0006,1.0,0.9994,1.0
+Visual Splice,450,transformed_cnn_signal_g,0.9685,0.9768,0.0256,0.8744,0.9782,0.9752,0.978
+Visual Splice,450,m3_calibrated_probability,0.8288,0.7542,0.1059,0.7542,0.9952,0.7542,0.99
+Visual Splice,450,fusion_probability_best_alpha,0.8358,0.7654,0.1007,0.7602,0.9944,0.7653,0.9888
+Visual Splice,450,stacker_probability,0.9566,0.9653,0.0635,0.6795,0.995,0.9625,0.9918
+Coordinated Full Forgery,150,cnn_probability,0.0906,0.0169,0.1766,0.0001,0.9961,0.0034,0.0844
+Coordinated Full Forgery,150,transformed_cnn_signal_g,0.8884,0.8784,0.022,0.8743,0.9778,0.8755,0.8904
+Coordinated Full Forgery,150,m3_calibrated_probability,0.7714,0.7542,0.0557,0.7542,0.9942,0.7542,0.7542
+Coordinated Full Forgery,150,fusion_probability_best_alpha,0.7772,0.7605,0.053,0.7602,0.9892,0.7603,0.7614
+Coordinated Full Forgery,150,stacker_probability,0.7382,0.6958,0.0824,0.6786,0.9891,0.6869,0.743
+Other Forged Attacks,900,cnn_probability,0.0804,0.0076,0.1892,0.0,0.9999,0.0011,0.0442
+Other Forged Attacks,900,transformed_cnn_signal_g,0.8862,0.8764,0.0229,0.8743,0.9782,0.875,0.8832
+Other Forged Attacks,900,m3_calibrated_probability,0.9895,0.995,0.0246,0.7542,0.9953,0.9941,0.9952
+Other Forged Attacks,900,fusion_probability_best_alpha,0.9843,0.9892,0.0234,0.7603,0.9944,0.9887,0.9894
+Other Forged Attacks,900,stacker_probability,0.9418,0.9393,0.023,0.6797,0.995,0.9372,0.9436

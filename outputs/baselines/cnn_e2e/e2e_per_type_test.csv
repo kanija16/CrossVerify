@@ -1,0 +1,10 @@
+tamper_type,n,e2e_flag_rate,fusion_flag_rate,e2e_auc_vs_genuine,fisher_p_flag_vs_genuine,mannwhitney_p_score_vs_genuine,auc_family_a,auc_family_b
+checksum_invalid,150,0.1133,1.0,0.519,1.0,0.566,0.514,0.525
+coordinated_full_forgery,150,0.1867,0.14,0.543,0.105,0.197,0.508,0.575
+field_missing,150,1.0,0.9733,1.0,0.0,0.0,1.0,1.0
+fine_grained_edit,150,0.1333,0.9733,0.522,0.726,0.507,0.499,0.539
+format_invalid,150,0.58,1.0,0.764,0.0,0.0,1.0,0.56
+genuine,150,0.1133,0.12,,,,,
+qr_only_mismatch,150,0.12,0.96,0.494,1.0,0.85,0.508,0.484
+text_qr_mismatch,150,0.1133,0.94,0.485,1.0,0.656,0.478,0.489
+visual_splice,450,0.6467,0.9578,0.826,0.0,0.0,0.791,0.858

@@ -1,0 +1,10 @@
+tamper_type,role,metric_name,total,M3_Calibrated,Semantics_Naive_Average,Semantics_Corrected_Fusion,Exploratory_Stacker
+genuine,genuine,specificity,150,0.9533,0.9,0.9533,0.9067
+visual_splice,forged_attack,recall,450,0.2822,0.9244,0.2822,0.9311
+coordinated_full_forgery,forged_attack,recall,150,0.0533,0.1,0.0533,0.12
+text_qr_mismatch,forged_attack,recall,150,0.9267,0.2533,0.9267,0.94
+qr_only_mismatch,forged_attack,recall,150,0.9467,0.3,0.9467,0.96
+checksum_invalid,forged_attack,recall,150,1.0,0.2867,1.0,1.0
+format_invalid,forged_attack,recall,150,1.0,0.08,1.0,1.0
+field_missing,forged_attack,recall,150,1.0,0.02,1.0,1.0
+fine_grained_edit,forged_attack,recall,150,0.92,0.2667,0.92,0.94

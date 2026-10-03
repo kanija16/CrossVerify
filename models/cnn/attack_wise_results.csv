@@ -1,0 +1,10 @@
+tamper_type,cnn_target_role,n_samples,n_genuine,n_forged,accuracy,precision,recall,f1,roc_auc,mean_cnn_probability,median_cnn_probability
+checksum_invalid,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.94,,,,,0.1019,0.0155
+coordinated_full_forgery,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.9267,,,,,0.1055,0.0195
+field_missing,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,1.0,,,,,0.0035,0.0007
+fine_grained_edit,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.9333,,,,,0.0976,0.0124
+format_invalid,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.9733,,,,,0.0369,0.003
+genuine,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.9533,,,,,0.0849,0.0107
+qr_only_mismatch,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.9333,,,,,0.1065,0.0176
+text_qr_mismatch,Non-Visual Forgery Class (cnn_label=genuine),150,150,0,0.96,,,,,0.0841,0.0145
+visual_splice,Target Forgery Class (cnn_label=forged),450,0,450,0.9311,,,,,0.9333,0.9999

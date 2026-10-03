@@ -1,0 +1,6 @@
+within_doc_metric,genuine_mean,genuine_std,coord_mean,coord_std,cohens_d,ks_pvalue
+within_doc_max_field_zscore,1.9011,0.1736,1.9074,0.0848,0.0459,0.8943205382966369
+within_doc_mean_abs_zscore,0.8017,0.0778,0.8151,0.0419,0.2145,0.07930977331891072
+within_doc_zscore_dispersion,0.5513,0.069,0.5465,0.0554,-0.0759,0.13906219315479607
+num_fields_gt_2sd,0.0,0.0,0.0,0.0,0.0,1.0
+num_fields_gt_3sd,0.0,0.0,0.0,0.0,0.0,1.0

@@ -1,0 +1,53 @@
+{
+  "Family A": {
+    "n_total": 825,
+    "n_genuine": 75,
+    "n_forged": 750,
+    "positive_rate": 0.9091,
+    "a0_metrics": {
+      "pr_auc": 0.9767,
+      "roc_auc": 0.8579,
+      "mean_prediction_genuine": 0.2696,
+      "mean_prediction_forged": 0.7622,
+      "median_prediction_genuine": 0.2424,
+      "median_prediction_forged": 0.97
+    },
+    "a1_metrics": {
+      "pr_auc": 0.9767,
+      "roc_auc": 0.8579,
+      "mean_prediction_genuine": 0.2458,
+      "mean_prediction_forged": 0.761,
+      "median_prediction_genuine": 0.2183,
+      "median_prediction_forged": 0.9823
+    }
+  },
+  "Family B": {
+    "n_total": 825,
+    "n_genuine": 75,
+    "n_forged": 750,
+    "positive_rate": 0.9091,
+    "a0_metrics": {
+      "pr_auc": 0.969,
+      "roc_auc": 0.8139,
+      "mean_prediction_genuine": 0.2784,
+      "mean_prediction_forged": 0.7034,
+      "median_prediction_genuine": 0.2424,
+      "median_prediction_forged": 0.9553
+    },
+    "a1_metrics": {
+      "pr_auc": 0.9688,
+      "roc_auc": 0.8129,
+      "mean_prediction_genuine": 0.2994,
+      "mean_prediction_forged": 0.7075,
+      "median_prediction_genuine": 0.2656,
+      "median_prediction_forged": 0.9467
+    }
+  },
+  "pooled_metrics": {
+    "a0_pr_auc": 0.9729,
+    "a1_pr_auc": 0.9781,
+    "a0_roc_auc": 0.8357,
+    "a1_roc_auc": 0.8444,
+    "simpsons_paradox_explanation": "Conditioning on document_family does NOT improve intra-family discrimination: Family A PR-AUC is identical (0.9767 vs 0.9767) and Family B PR-AUC is slightly lower (0.9690 vs 0.9688). The apparent gain in pooled PR-AUC (0.9729 -> 0.9781) is a mathematical aggregation artifact (Simpson's paradox): trees shift the mean probabilities between Family A and Family B, changing how samples from the two distributions interleave in the global precision-recall ranking without improving separation within either family."
+  }
+}

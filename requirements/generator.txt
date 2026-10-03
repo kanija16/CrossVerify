@@ -1,0 +1,12 @@
+# Dataset generator (generator/). Versions read from the generator's virtualenv (Python 3.10, macOS).
+# Also requires system binaries: Tesseract OCR and the zbar library.
+faker==40.38.0
+pillow==12.3.0
+qrcode==8.2
+numpy==2.2.6
+pytesseract==0.3.13
+pyzbar==0.1.9
+rapidfuzz==3.14.5
+# Only needed for generator/src/leakage_shortcut_audit.py
+scikit-learn==1.7.2
+scipy==1.15.3

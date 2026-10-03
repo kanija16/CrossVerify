@@ -1,0 +1,40 @@
+{
+  "model_status": "FROZEN",
+  "freeze_timestamp": "2026-09-14T08:13:32.001085+00:00",
+  "test_set_access_status": "STRICTLY LOCKED \u2014 ZERO TEST ACCESS PRIOR TO FREEZE",
+  "selected_architecture": "A0 Canonical Random Forest with 5-fold Sigmoid Probability Calibration",
+  "feature_count": 15,
+  "features": [
+    "qr_readable",
+    "text_qr_match_score",
+    "checksum_valid",
+    "format_valid",
+    "missing_field_count",
+    "ocr_field_presence_count",
+    "ocr_field_presence_rate",
+    "qr_field_count",
+    "ocr_qr_key_overlap_count",
+    "field_similarity__0",
+    "field_similarity__1",
+    "field_similarity__2",
+    "field_similarity__3",
+    "field_similarity__4",
+    "checksum_computed"
+  ],
+  "decision_threshold": 0.25,
+  "validation_metrics": {
+    "pr_auc": 0.9729,
+    "roc_auc": 0.8357,
+    "f1": 0.8257,
+    "precision": 0.9852,
+    "recall": 0.7107,
+    "specificity": 0.8933,
+    "fpr": 0.1067,
+    "brier_score_uncalibrated": 0.177,
+    "brier_score_calibrated": 0.0709
+  },
+  "train_samples": 7700,
+  "val_samples": 1650,
+  "test_samples_locked": 1650,
+  "explicit_freeze_contract": "All model parameters, thresholds, and feature schemas are permanently frozen. Proceeding to one-shot test evaluation."
+}

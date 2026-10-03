@@ -1,0 +1,56 @@
+=== Sample counts (family x tamper_type) ===
+
+family_a:
+  checksum_invalid       500
+  coordinated_full_forgery 500
+  field_missing          500
+  fine_grained_edit      500
+  format_invalid         500
+  genuine                500
+  qr_only_mismatch       500
+  text_qr_mismatch       500
+  visual_splice          1500
+  TOTAL                  5500
+
+family_b:
+  checksum_invalid       500
+  coordinated_full_forgery 500
+  field_missing          500
+  fine_grained_edit      500
+  format_invalid         500
+  genuine                500
+  qr_only_mismatch       500
+  text_qr_mismatch       500
+  visual_splice          1500
+  TOTAL                  5500
+
+=== Signal quality (family x tamper_type) ===
+family     tamper_type             n  checksum_valid  qr_readable   ocr_id  avg_match
+family_a   checksum_invalid      500            0.00         1.00     1.00       0.98
+family_a   coordinated_full_forgery  500            1.00         1.00     1.00       1.00
+family_a   field_missing         500            1.00         1.00     1.00       0.80
+family_a   fine_grained_edit     500            1.00         1.00     1.00       0.97
+family_a   format_invalid        500            1.00         1.00     1.00       0.97
+family_a   genuine               500            1.00         1.00     1.00       1.00
+family_a   qr_only_mismatch      500            1.00         1.00     1.00       0.89
+family_a   text_qr_mismatch      500            0.99         1.00     0.99       0.88
+family_a   visual_splice        1500            0.90         1.00     1.00       0.93
+family_b   checksum_invalid      500            0.00         1.00     0.98       0.95
+family_b   coordinated_full_forgery  500            0.97         1.00     0.98       0.97
+family_b   field_missing         500            0.94         1.00     0.96       0.75
+family_b   fine_grained_edit     500            0.97         1.00     0.98       0.95
+family_b   format_invalid        500            0.97         1.00     0.98       0.94
+family_b   genuine               500            0.97         1.00     0.98       0.97
+family_b   qr_only_mismatch      500            0.98         1.00     0.98       0.88
+family_b   text_qr_mismatch      500            0.97         1.00     0.97       0.87
+family_b   visual_splice        1500            0.96         1.00     0.98       0.95
+
+Samples with empty OCR identifier field: 135/11000 (1.2%)
+
+=== Variant and image integrity ===
+Record variant counts: {11: 1000}
+Visual-splice counts per record: {3: 1000}
+Length-preserving format_invalid: 1000/1000
+Duplicate image groups: 0
+
+No splits/ directory found yet -- skipping leakage check.
