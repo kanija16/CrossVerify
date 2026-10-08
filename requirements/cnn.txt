@@ -1,5 +1,5 @@
 # Visual branch (src/baseline/). Versions as reported in the paper.
-# Deployment CNN (models/cnn) and the end-to-end baseline: Python 3.9.13
+# Deployment CNN (models/cnn): Python 3.9.13
 torch==2.8.0
 torchvision==0.23.0
 numpy==1.23.5
@@ -8,3 +8,5 @@ scikit-learn==1.6.1
 pillow==11.3.0
 # The 5 out-of-fold CNNs (train_cnn_oof.py) were trained with
 # Python 3.12.10, torch==2.5.1, torchvision==0.20.1.
+# The end-to-end baseline (train_cnn_e2e.py) was trained with Python 3.10.9 and
+# torch==2.14.1 on Apple-silicon (MPS), as recorded in outputs/baselines/cnn_e2e*/training_log.json.

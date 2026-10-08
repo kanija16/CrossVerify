@@ -1,4 +1,4 @@
-# Changes made for the public release / paper revision
+# Changes made for the public release
 
 No reported number changed. All edits either add missing files or make existing scripts run
 outside the original authors' machines. Every script below was re-run after editing and
@@ -17,6 +17,10 @@ reproduces the previously saved outputs exactly.
 | `src/baseline/train_cnn_e2e.py` | End-to-end image-only CNN baseline on `final_label`. Run with a 15-epoch and a 30-epoch budget (`--epochs 30`); outputs in `outputs/baselines/cnn_e2e*/` |
 | `outputs/baselines/cnn_e2e/`, `outputs/baselines/cnn_e2e_ep30/` | End-to-end baseline predictions, metrics and training logs (15- and 30-epoch runs; the 30-epoch run is the paper's headline) |
 | `src/analysis/e2e_per_type.py` | Per-mechanism analysis of the end-to-end baseline (flag rates, AUC vs. genuine, Fisher, Mann-Whitney) |
+| `src/evaluation/bootstrap_ci_identity.py`, `outputs/fusion/test_bootstrap_ci_identity.json` | Identity-level bootstrap CIs (resampling the 150 test identities with all 11 documents each); the paper reports these |
+| `src/analysis/e2e_m3_fusion.py`, `outputs/baselines/cnn_e2e_ep30/e2e_m3_fusion_test.json` | End-to-end CNN fused with M3 (validation-fitted protocol), compared with the image-only branch + M3 |
+| `src/analysis/resolution_check.py` | OCR/QR readability of documents downscaled to the CNN's 224x224 input |
+| `src/analysis/make_fig_examples.py` | Builds the paper's example figure (Fig. 1) from full-resolution cards |
 | `LICENSE` | MIT License for the code |
 | `src/m3_crossmodal/model_io.py` | Loads the scikit-learn 1.6.1 M3 models under newer scikit-learn (patch from pre-test gate 2) |
 | `requirements/*.txt` | Pinned environments (generator versions read from its virtualenv; others from the paper) |

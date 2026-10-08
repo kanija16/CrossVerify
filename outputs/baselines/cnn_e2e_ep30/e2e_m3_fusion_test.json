@@ -1,0 +1,62 @@
+{
+  "protocol": "LogisticRegression fitted on validation predictions; threshold selected on validation (max F1, specificity >= 0.90); test scored once",
+  "cnn_branch_plus_m3": {
+    "inputs": [
+      "cnn",
+      "m3"
+    ],
+    "weights": [
+      3.0437,
+      5.4783
+    ],
+    "intercept": -1.0852,
+    "val_roc_auc": 0.9237,
+    "threshold": 0.81,
+    "test_roc_auc": 0.93876,
+    "test_pr_auc": 0.99374,
+    "test_recall": 0.8847,
+    "test_specificity": 0.88,
+    "test_f1": 0.9329,
+    "test_flag_rate_by_mechanism": {
+      "checksum_invalid": 1.0,
+      "coordinated_full_forgery": 0.1333,
+      "field_missing": 0.9733,
+      "fine_grained_edit": 0.9733,
+      "format_invalid": 1.0,
+      "genuine": 0.12,
+      "qr_only_mismatch": 0.96,
+      "text_qr_mismatch": 0.9333,
+      "visual_splice": 0.9578
+    }
+  },
+  "e2e_cnn_plus_m3": {
+    "inputs": [
+      "e2e",
+      "m3"
+    ],
+    "weights": [
+      3.57,
+      4.8727
+    ],
+    "intercept": -2.1143,
+    "val_roc_auc": 0.91424,
+    "threshold": 0.86,
+    "test_roc_auc": 0.92966,
+    "test_pr_auc": 0.99278,
+    "test_recall": 0.856,
+    "test_specificity": 0.9067,
+    "test_f1": 0.9178,
+    "test_flag_rate_by_mechanism": {
+      "checksum_invalid": 0.9933,
+      "coordinated_full_forgery": 0.1267,
+      "field_missing": 1.0,
+      "fine_grained_edit": 0.9667,
+      "format_invalid": 1.0,
+      "genuine": 0.0933,
+      "qr_only_mismatch": 0.96,
+      "text_qr_mismatch": 0.94,
+      "visual_splice": 0.8578
+    }
+  },
+  "m3_alone_test_roc_auc": 0.84356
+}

@@ -1,0 +1,114 @@
+{
+  "protocol": "1000 identity-level resamples (150 identities x 11 documents), RandomState(42), percentile 95% CI",
+  "cnn": {
+    "target": "cnn_label",
+    "threshold": 0.5,
+    "roc_auc": {
+      "point_estimate": 0.98175,
+      "ci_95_lower": 0.9737,
+      "ci_95_upper": 0.9888
+    },
+    "pr_auc": {
+      "point_estimate": 0.97231,
+      "ci_95_lower": 0.9622,
+      "ci_95_upper": 0.9818
+    },
+    "accuracy": {
+      "point_estimate": 0.94667,
+      "ci_95_lower": 0.9339,
+      "ci_95_upper": 0.96
+    },
+    "precision": {
+      "point_estimate": 0.88025,
+      "ci_95_lower": 0.8439,
+      "ci_95_upper": 0.9181
+    },
+    "recall": {
+      "point_estimate": 0.93111,
+      "ci_95_lower": 0.9067,
+      "ci_95_upper": 0.9533
+    },
+    "f1": {
+      "point_estimate": 0.90497,
+      "ci_95_lower": 0.8829,
+      "ci_95_upper": 0.9276
+    }
+  },
+  "m3": {
+    "target": "final_label",
+    "threshold": 0.25,
+    "roc_auc": {
+      "point_estimate": 0.84356,
+      "ci_95_lower": 0.8331,
+      "ci_95_upper": 0.8522
+    },
+    "pr_auc": {
+      "point_estimate": 0.97371,
+      "ci_95_lower": 0.9723,
+      "ci_95_upper": 0.975
+    },
+    "accuracy": {
+      "point_estimate": 0.73697,
+      "ci_95_lower": 0.723,
+      "ci_95_upper": 0.7503
+    },
+    "precision": {
+      "point_estimate": 0.9881,
+      "ci_95_lower": 0.9818,
+      "ci_95_upper": 0.9935
+    },
+    "recall": {
+      "point_estimate": 0.71933,
+      "ci_95_lower": 0.7026,
+      "ci_95_upper": 0.7353
+    },
+    "f1": {
+      "point_estimate": 0.83256,
+      "ci_95_lower": 0.8218,
+      "ci_95_upper": 0.8427
+    }
+  },
+  "fusion": {
+    "target": "final_label",
+    "threshold": 0.82,
+    "roc_auc": {
+      "point_estimate": 0.93884,
+      "ci_95_lower": 0.9278,
+      "ci_95_upper": 0.949
+    },
+    "pr_auc": {
+      "point_estimate": 0.99375,
+      "ci_95_lower": 0.9924,
+      "ci_95_upper": 0.995
+    },
+    "accuracy": {
+      "point_estimate": 0.88545,
+      "ci_95_lower": 0.8745,
+      "ci_95_upper": 0.8964
+    },
+    "precision": {
+      "point_estimate": 0.98664,
+      "ci_95_lower": 0.9808,
+      "ci_95_upper": 0.9918
+    },
+    "recall": {
+      "point_estimate": 0.886,
+      "ci_95_lower": 0.8767,
+      "ci_95_upper": 0.896
+    },
+    "f1": {
+      "point_estimate": 0.93361,
+      "ci_95_lower": 0.927,
+      "ci_95_upper": 0.9402
+    }
+  },
+  "cnn_validation": {
+    "target": "cnn_label",
+    "threshold": 0.5,
+    "roc_auc": {
+      "point_estimate": 0.96341,
+      "ci_95_lower": 0.9514,
+      "ci_95_upper": 0.9749
+    }
+  }
+}

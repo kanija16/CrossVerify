@@ -6,7 +6,7 @@ leakage-controlled stacked logistic-regression fusion model. Evaluated on a synt
 identity-grouped benchmark of 11,000 documents (1,000 fictional identities × 11 variants,
 two document families, eight forgery mechanisms).
 
-> Paper: *CrossVerify* (IEEE Access, under review). Citation to be added.
+> Paper: *CrossVerify* (manuscript in preparation). Citation to be added.
 
 ## Repository layout
 
@@ -17,7 +17,7 @@ two document families, eight forgery mechanisms).
 | `src/baseline/` | Visual branch (ResNet-18). `train_cnn.py`, `train_cnn_oof.py`, `eval_cnn_test.py`; end-to-end baseline `train_cnn_e2e.py` |
 | `src/m3_crossmodal/` | Cross-modal branch: live OCR/QR extraction, consistency features, Random Forest |
 | `src/m3_crossmodal/fusion/` | Out-of-fold stacking, fusion training, threshold selection, locked test evaluation |
-| `src/m3_crossmodal/forensics/` | Forensic investigations for coordinated full forgery (paper Section IX) |
+| `src/m3_crossmodal/forensics/` | Forensic investigations for coordinated full forgery (paper Section 10.2) |
 | `src/evaluation/` | Metrics and bootstrap confidence intervals |
 | `src/analysis/` | Revision analyses (McNemar, prevalence, decoder comparison, etc.) |
 | `outputs/features/` | Extracted M3 features for all splits |
@@ -77,7 +77,7 @@ python -m src.evaluation.bootstrap_ci
 # simple fusion baselines, prevalence-adjusted precision, Brier)
 python -m src.analysis.crossverify_audit
 
-# End-to-end CNN baseline: per-mechanism table (paper Section VIII), from the saved predictions
+# End-to-end CNN baseline: per-mechanism table (paper Section 8), from the saved predictions
 python -m src.analysis.e2e_per_type
 ```
 
